@@ -60,13 +60,13 @@ const Hero = () => {
                         <Typography color="primary.contrastText" variant="h2" textAlign="center" pb={2}>I'm a Software Engineer</Typography>
                         <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                             <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                                <StyledButton>
+                                <StyledButton onClick={() => console.log("download")}>
                                     <DownloadIcon />
                                     Download CV
                                 </StyledButton>
                             </Grid>
                             <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                                <StyledButton>
+                                <StyledButton onClick={() => console.log("Contact me")}>
                                     <MailOutlineIcon />
                                     Contact me
                                 </StyledButton>
