@@ -10,7 +10,24 @@ let theme = createTheme({
         },
     },
     typography: {
-        fontFamily: "Seoge UI"
+        fontFamily: [
+            // "Arial",
+            // "Segoe Print",
+            "Yu Gothic",
+            // "Script Regular",
+            // "Lucida Sans",
+            // '"Helvetica Neue"',
+            // '-apple-system',
+            // 'BlinkMacSystemFont',
+            // '"Segoe UI"',
+            // 'Roboto',
+            // '"Helvetica Neue"',
+            // 'Arial',
+            // 'sans-serif',
+            // '"Apple Color Emoji"',
+            // '"Segoe UI Emoji"',
+            // '"Segoe UI Symbol"',
+        ].join(','),
     }
 });
 
