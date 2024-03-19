@@ -17,7 +17,7 @@ const Hero = () => {
         },
         [theme.breakpoints.up('sm')]: { // <=mobile 600+
             paddingTop: "20px",
-            height: "120vh",
+            height: "140vh",
         },
         [theme.breakpoints.up('md')]: { // >=tablet 900+
             paddingTop: "0",
@@ -30,10 +30,10 @@ const Hero = () => {
         borderRadius: "50%",
         border: `1px solid ${theme.palette.primary.contrastText}`,
         [theme.breakpoints.up('xs')]: { // <=mobile 600-
-            width: "65%",
+            width: "45%",
         },
         [theme.breakpoints.up('sm')]: { // <=mobile 600+
-            width: "70%",
+            width: "55%",
         },
         [theme.breakpoints.up('md')]: { // >=tablet 900+
             width: "75%",
