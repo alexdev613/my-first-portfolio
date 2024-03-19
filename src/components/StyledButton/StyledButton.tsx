@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 interface StyledButtonProps {
     children: ReactNode,
-    onClick: () => void
+    onClick: () => void,
 }
 
 const StyledButton: React.FC<StyledButtonProps> = ({ children, onClick }) => {
@@ -19,6 +19,7 @@ const StyledButton: React.FC<StyledButtonProps> = ({ children, onClick }) => {
         alignItems: "center",
         justifyContent: "center",
         gap: "10px",
+        cursor: "pointer",
 
         '&:hover': {
             backgroundColor: theme.palette.secondary.light
