@@ -14,6 +14,9 @@ import {
     Copyright,
 } from "./styles.ts";
 
+import logo from "../../../../assets/images/chemicalLogoAlex.png";
+import SiteSeguro from "../../../../assets/images/site-protegido.webp";
+
 import { FaGithub, FaLinkedinIn, FaInstagram, FaYoutube } from "react-icons/fa";
 
 interface CustomLink {
@@ -77,7 +80,7 @@ const Footer: React.FC = () => {
             {/* Adicione a imagem apenas para o item "Sobre Nós" */}
             {menu.title === "Sobre Nós" && (
                 <Image
-                src="src\assets\images\site-protegido.webp"
+                src={SiteSeguro}
                 alt="Site Protegido"
                 style={{ width: "70%" }}/>
             )}
@@ -88,7 +91,7 @@ const Footer: React.FC = () => {
         <FooterContainer>
             <FooterContent>
                 <Column>
-                    <Image src="src\assets\images\chemicalLogoAlex.PNG" alt="Logo Chemical Alex" />
+                    <Image src={logo} alt="Logo Chemical Alex" />
                     <SocialsList>
 
                         <SocialIcon>

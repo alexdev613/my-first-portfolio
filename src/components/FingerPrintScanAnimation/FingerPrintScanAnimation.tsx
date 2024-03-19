@@ -1,3 +1,6 @@
+import fingerprint1 from "../../assets/images/fingerPrint_01.png";
+import fingerprint2 from "../../assets/images/fingerPrint_02.png";
+
 const FingerPrintScanAnimation = () => {
     return (
         <>
@@ -23,7 +26,7 @@ const FingerPrintScanAnimation = () => {
                     position: relative;
                     width: 225px;
                     height: 285px;
-                    background-image: url(./src/assets/images/fingerPrint_01.png);
+                    background-image: url(${fingerprint1});
                     background-size: 225px;
                 }
 
@@ -33,7 +36,7 @@ const FingerPrintScanAnimation = () => {
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background-image: url(./src/assets/images/fingerPrint_02.png);
+                    background-image: url(${fingerprint2});
                     background-size: 225px;
                     animation: animate 4s ease-in-out infinite;
                 }
