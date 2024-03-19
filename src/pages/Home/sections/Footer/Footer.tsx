@@ -95,25 +95,25 @@ const Footer: React.FC = () => {
                     <SocialsList>
 
                         <SocialIcon>
-                            <IconLink>
+                            <IconLink href="https://github.com/alexdev613">
                               <FaGithub />
                             </IconLink>
                         </SocialIcon>
 
                         <SocialIcon>
-                            <IconLink>
+                            <IconLink href="https://www.linkedin.com/in/alex-nascimento-b818b694/">
                               <FaLinkedinIn />
                             </IconLink>
                         </SocialIcon>
 
                         <SocialIcon>
-                            <IconLink>
+                            <IconLink href="https://instagram.com/alexnascimento613">
                                 <FaInstagram />
                             </IconLink>
                         </SocialIcon>
 
                         <SocialIcon>
-                            <IconLink>
+                            <IconLink href="https://youtube.com/">
                                 <FaYoutube />
                             </IconLink>
                         </SocialIcon>
