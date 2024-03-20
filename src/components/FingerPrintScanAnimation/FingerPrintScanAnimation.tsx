@@ -20,6 +20,7 @@ const FingerPrintScanAnimation = () => {
                     align-items: center;
                     min-height: 30vh;
                     background-color: #111;
+                    border-radius: 1.875rem;
                 }
 
                 .fingerprint {

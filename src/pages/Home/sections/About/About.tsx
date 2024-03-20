@@ -41,7 +41,7 @@ const About = () => {
                         </Box>
                     </StyledAnimationContainer>
                     <StyledTextGrid item xs={12} md={8}>
-                        <Box position="relative" border="2px black solid" borderRadius="18px" padding="1.5rem 2.5rem">
+                        <Box position="relative" border="2px solid silver;" borderRadius="1.875rem" padding="1.5rem 2.5rem">
                             <Typography variant="h4" fontWeight="bold">Apresentação:</Typography>
                             <Typography fontSize={18} fontWeight="bold" pl={4}>Desenvolvedor Front-end</Typography>
                             <Typography
