@@ -29,9 +29,10 @@ export const Content = styled.div`
     min-width: 230px;
     height: fit-content;
     padding: 1.25rem;
-    background-color: #fff;
+    background-color: darkblue;
     border: 1px solid #bdbdbd;
     border-radius: 1.875rem;
+    margin-bottom: 3.5rem;
 
     @media (max-width:900px) {
       flex-direction: column;
@@ -56,6 +57,7 @@ export const CardSkills = styled.div`
     min-width: 241.5px;
     border: 1px solid #bdbdbd;
     border-radius: 1.875rem;
+    background-color: #fff;
 
     @media (max-width: 900px) {
       width: 100%;
