@@ -56,7 +56,7 @@ export const MenuItem = styled.li`
   font-size: 0.8rem;
 `;
 
-export const Link = styled.a<{
+export const CustomizedLink = styled.a<{
     textDecoration: string,
     color: string,
     fontSize: string

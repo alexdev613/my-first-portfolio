@@ -1,10 +1,11 @@
 import { AppBar, MenuItem, Toolbar, styled } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
 
     const StyledToolbar = styled(Toolbar)(() => ({
         display: "flex",
-        justifyContent: "space-evenly"
+        justifyContent: "space-evenly",
     }))
 
     return (
@@ -13,9 +14,16 @@ const NavBar = () => {
                 <StyledToolbar>
                     <MenuItem>About</MenuItem>
                     <MenuItem>Skills</MenuItem>
-                    <MenuItem>Porjects</MenuItem>
-                    <MenuItem>Contact</MenuItem>
-                    <MenuItem>Blog</MenuItem>
+                    <MenuItem>Projects</MenuItem>
+                    <Link to="/contact">Contact</Link>
+                    <MenuItem>
+                        <Link
+                            to="/dashboard"
+                            style={{ textDecoration: "none", color: "#fff" }}
+                        >
+                            Blog
+                        </Link>
+                    </MenuItem>
                 </StyledToolbar>
             </AppBar>
         </>

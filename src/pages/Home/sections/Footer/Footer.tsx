@@ -6,13 +6,14 @@ import {
     Title,
     Menu,
     MenuItem,
-    Link,
+    CustomizedLink,
     Image,
     SocialsList,
     SocialIcon,
     IconLink,
     Copyright,
 } from "./styles.ts";
+import { Link } from "react-router-dom";
 
 import logo from "../../../../assets/images/chemicalLogoAlex.png";
 import SiteSeguro from "../../../../assets/images/site-protegido.webp";
@@ -67,13 +68,13 @@ const Footer: React.FC = () => {
             <Menu>
                 {menu.menus.map((item, index) => (
                     <MenuItem key={index}>
-                        <Link
+                        <CustomizedLink
                           href={item.href}
                           textDecoration="none"
                           color="#fff"
                           fontSize="inherit">
                             {item.label}
-                        </Link>
+                        </CustomizedLink>
                     </MenuItem>
                 ))}
             </Menu>
@@ -130,14 +131,14 @@ const Footer: React.FC = () => {
                     O uso deste site está sujeito aos termos de uso expressos. Ao usar este
                     site, você concorda em estar vinculado por estes
                 </p>
-                <Link
+                <CustomizedLink
                     href="#"
                     textDecoration="underline"
                     color="#FFF"
                     fontSize="0.825rem"
                 >
-                        Termos de Serviço universal
-                </Link>
+                        <Link to="/serviceterms" style={{ color: "inherit" }}>Termos de Serviço Universal</Link>
+                </CustomizedLink>
             </Copyright>
         </FooterContainer>
     );
