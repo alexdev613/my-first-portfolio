@@ -15,11 +15,18 @@ const NavBar = () => {
                     <MenuItem>About</MenuItem>
                     <MenuItem>Skills</MenuItem>
                     <MenuItem>Projects</MenuItem>
-                    <Link to="/contact">Contact</Link>
+                    <MenuItem>
+                        <Link
+                            to="/contact"
+                            style={{ textDecoration: "inherit", color: "#fff" }}
+                        >
+                                Contact
+                        </Link>
+                    </MenuItem>
                     <MenuItem>
                         <Link
                             to="/dashboard"
-                            style={{ textDecoration: "none", color: "#fff" }}
+                            style={{ textDecoration: "inherit", color: "#fff" }}
                         >
                             Blog
                         </Link>
