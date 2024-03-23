@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-    max-width: 420px;
+    width: 100%;
+    max-width: 580px;
     min-width: 200px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -20,7 +21,7 @@ export const CardContainer = styled.div`
         max-height: 400px;
         max-width: max-content;
 
-        @media (max-width: 420px) {
+        @media (max-width: 580px) {
             flex-direction: column;
         }
     }
@@ -36,7 +37,7 @@ export const BoxImage = styled.div`
         width: 40%;
         max-height: none;
 
-        @media (max-width: 420px) {
+        @media (max-width: 580px) {
             width: 100%;
         }
     }
@@ -54,6 +55,9 @@ export const Image = styled.img`
 export const Content = styled.div`
     padding: 0 20px;
     transition: filter 0.2s;
+    display: flex;
+    flex-direction: column;
+    
 
     &:hover {
         filter: brightness(20);
@@ -63,7 +67,7 @@ export const Content = styled.div`
         width: 60%;
         padding: 0 16px;
 
-        @media (max-width: 420px) {
+        @media (max-width: 580px) {
             width: 100%;
         }
     }
@@ -81,21 +85,21 @@ export const Description = styled.p`
     margin-bottom: 16px;
 `;
 
-export const BoxInfo = styled.section`
+export const BoxInfo = styled.div`
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    height: max-content;
 `;
 
 export const Author = styled.div`
     color: #999;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
     max-width: 180px;
 `;
 
 export const DatePublished = styled.div`
     color: #999;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
 `;

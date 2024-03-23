@@ -18,8 +18,8 @@ const MiniCard: React.FC<MiniCardProps> = ({ imageUrl, title, description, autho
             <Content>
                 <Title>{title}</Title>
                 <Description>{description}</Description>
-                <BoxInfo>
-                    <Author>Autor: {author}</Author>
+                <BoxInfo style={{ bottom: "100px" }}>
+                    <Author>{author}</Author>
                     <DatePublished>{date}</DatePublished>
                 </BoxInfo>
             </Content>
