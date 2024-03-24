@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const WideCardContainer = styled.div`
     width: 95%;
-    min-width: 613px;
+    min-width: 380px;
     border: 1px solid #454545;
     border-radius: 8px;
     overflow: hidden;
