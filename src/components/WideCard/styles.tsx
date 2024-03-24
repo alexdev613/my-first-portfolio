@@ -39,6 +39,7 @@ export const BoxImage = styled.div`
     display: flex;
     align-items: center;
     overflow: hidden;
+    border-right: 1px solid #454545;
     /* background-color: black; */
     background-image: url("src/assets/images/stars.gif");
     background-size: cover;
