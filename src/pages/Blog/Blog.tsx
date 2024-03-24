@@ -7,6 +7,8 @@ import jaspionSword from "../../../src/assets/images/jaspion2.jpg";
 import jaspion from "../../../src/assets/images/jaspion.webp";
 import IA from "../../../src/assets/images/IA.jpg";
 import WideCard from "../../components/WideCard/WideCard";
+// import CarouselComponent from "../../components/CarouselComponent/CarouselComponent";
+import CarouselToCard from "../../components/CarouselToCard/CarouselTocard";
 
 
 const Blog = () => {
@@ -28,6 +30,8 @@ const Blog = () => {
         <>
         <BodyContainer>
             <h1 style={{ display: "flex", justifyContent: "center"}}>Olá Mundo!</h1>
+            {/* <CarouselComponent /> */}
+            <CarouselToCard />
             <div style={{ display: "flex", justifyContent: "center"}}>
                 <WideCard
                     imageUrl={jaspion}
