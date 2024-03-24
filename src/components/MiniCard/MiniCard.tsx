@@ -7,18 +7,19 @@ interface MiniCardProps {
     description: string;
     author: string;
     date: string;
+    onClick: () => void;
 }
 
-const MiniCard: React.FC<MiniCardProps> = ({ imageUrl, title, description, author, date }) => {
+const MiniCard: React.FC<MiniCardProps> = ({ imageUrl, title, description, author, date, onClick }) => {
     return (
-        <CardContainer>
+        <CardContainer onClick={onClick}>
             <BoxImage>
                 <Image src={imageUrl} alt={title} />
             </BoxImage>
             <Content>
                 <Title>{title}</Title>
                 <Description>{description}</Description>
-                <BoxInfo style={{ bottom: "100px" }}>
+                <BoxInfo>
                     <Author>{author}</Author>
                     <DatePublished>{date}</DatePublished>
                 </BoxInfo>
