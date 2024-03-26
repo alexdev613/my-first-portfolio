@@ -32,16 +32,8 @@ const Blog = () => {
             <h1 style={{ display: "flex", justifyContent: "center"}}>Olá Mundo!</h1>
             {/* <CarouselComponent /> */}
             <CarouselToCard />
-            <div style={{ display: "flex", justifyContent: "center"}}>
-                <WideCard
-                    imageUrl={jaspion}
-                    title={"Jaspion no Prime Video"}
-                    description={"O Fantástico Jaspion, criado pelo profeta Edin, ele foi preparado para enfrentar o terrível Satan Goss..."}
-                    author={"Alex Nascimento"}
-                    date={"23-mar-2024"}
-                    onClick={navigateToJaspionPage}
-                />
-            </div>
+            <br /><br />
+            
             <MiniCardContainer>
                 <MiniCard
                     imageUrl={xmen}
@@ -69,8 +61,22 @@ const Blog = () => {
                     date={"22-03-2024"}
                     onClick={() => navigateToPage('/dashboard/tech/whatsia')}
                 />
-                
+    
             </MiniCardContainer>
+
+            <br /> <br /> <br />
+            <div style={{ display: "flex", justifyContent: "center"}}>
+                <WideCard
+                    imageUrl={jaspion}
+                    title={"Jaspion no Prime Video"}
+                    description={"O Fantástico Jaspion, criado pelo profeta Edin, ele foi preparado para enfrentar o terrível Satan Goss..."}
+                    author={"Alex Nascimento"}
+                    date={"23-mar-2024"}
+                    onClick={navigateToJaspionPage}
+                />
+            </div>
+
+            <br /> <br /> <br /><br /> <br /> <br />
             <Link to="/" style={{ textDecoration: "underline", color: "#fff" }}>Voltar pra Home</Link>
         </BodyContainer>
         <Footer />
