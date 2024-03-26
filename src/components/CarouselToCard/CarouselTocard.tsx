@@ -22,7 +22,7 @@ const CarouselToCard = () => {
       <h1>Slider with React JS</h1>
       <Swiper
         modules={[EffectFade, Pagination, A11y]}
-        effect="fade"
+        effect=""
         slidesPerView={1}
         navigation={true} // Defina navigation como true
         pagination={{ clickable: true }}
