@@ -10,7 +10,7 @@ const NavBar: React.FC<NavBarProps> = ({ position }) => {
 
     const StyledToolbar = styled(Toolbar)(() => ({
         display: "flex",
-        justifyContent: "space-evenly",
+        justifyContent: "space-around",
     }));
 
     return (
