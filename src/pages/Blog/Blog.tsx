@@ -9,6 +9,7 @@ import IA from "../../../src/assets/images/IA.jpg";
 import WideCard from "../../components/WideCard/WideCard";
 // import CarouselComponent from "../../components/CarouselComponent/CarouselComponent";
 import CarouselToCard from "../../components/CarouselToCard/CarouselTocard";
+import NavBar from "../../components/NavBar/NavBar";
 
 
 const Blog = () => {
@@ -28,9 +29,16 @@ const Blog = () => {
 
     return (
         <>
+        <NavBar position={"static"} />
         <BodyContainer>
-            <h1 style={{ display: "flex", justifyContent: "center"}}>Olá Mundo!</h1>
-            {/* <CarouselComponent /> */}
+            <h1 style={{
+                display: "flex",
+                justifyContent: "center",
+                marginTop: "100px",
+                marginBottom: "50px"}
+            }>
+                Olá Mundo!
+            </h1>
             <CarouselToCard />
             <br /><br />
             
