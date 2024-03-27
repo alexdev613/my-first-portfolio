@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 export const WideCardContainer = styled.div`
-    width: 95%;
+    width: 94%;
+    max-width: 1200px;
     min-width: 280px;
     border: 1px solid #454545;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
+    background-color: #1f1f1f;
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: auto 1fr auto; /* Ajuste da altura das linhas */

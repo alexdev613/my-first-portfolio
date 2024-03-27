@@ -1,14 +1,14 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import "swiper/css/autoplay";
-import { EffectFade, Pagination, A11y } from "swiper/modules";
+import { EffectFade, Pagination, A11y, Navigation, Autoplay } from "swiper/modules";
 
-import { useNavigate } from "react-router-dom";
+import { To, useNavigate } from "react-router-dom";
 import WideCard from "../WideCard/WideCard";
 import jaspionImage from "../../../src/assets/images/jaspion.webp";
 import benjaminGrahan from "../../../src/assets/images/benjaminGrahan.jpg";
 import akiraToriyama from "../../../src/assets/images/akiratoriyama.jpg";
 import b3 from "../../../src/assets/images/b3.jpg";
+import wolverine1997 from "../../../src/assets/images/wolverine97.jpg";
 
 const CarouselToCard = () => {
   const navigate = useNavigate();
@@ -16,21 +16,24 @@ const CarouselToCard = () => {
   const navigateToJaspionPage = () => {
     navigate("/dashboard/tv/jaspion");
   };
+  
+  const navigateToPage = (route: To) => {
+    navigate(route);
+  };
 
   return (
     <div>
-      <h1>Slider with React JS</h1>
       <Swiper
-        modules={[EffectFade, Pagination, A11y]}
+        modules={[Navigation, EffectFade, Pagination, A11y, Autoplay]} // tem que colocar Navigation para as setas de navegação funcionarem!
         effect=""
         slidesPerView={1}
         navigation={true} // Defina navigation como true
         pagination={{ clickable: true }}
         loop={true}
         keyboard={true}
-        spaceBetween={50}
-        scrollbar={{ draggable: true }}
-        autoplay={true}
+        spaceBetween={5}
+        // scrollbar={{ draggable: true }}
+        autoplay={{delay: 4000}}
       >
         <SwiperSlide style={{ display: "flex", justifyContent: "center" }} className="">
           <WideCard
@@ -53,7 +56,7 @@ const CarouselToCard = () => {
             }
             author={"Alex Nascimento"}
             date={"25-mar-2024"}
-            onClick={navigateToJaspionPage}
+            onClick={() => navigateToPage('/dashboard/news/akiratoriyamaumlegado')}
           />
         </SwiperSlide>
         <SwiperSlide style={{ display: "flex", justifyContent: "center" }}>
@@ -65,7 +68,7 @@ const CarouselToCard = () => {
             }
             author={"Alex Heisenberg"}
             date={"25-mar-2024"}
-            onClick={navigateToJaspionPage}
+            onClick={() => navigateToPage('/dashboard/finance/benjamingrahan')}
           />
         </SwiperSlide>
         <SwiperSlide style={{ display: "flex", justifyContent: "center" }}>
@@ -77,7 +80,19 @@ const CarouselToCard = () => {
             }
             author={"Alex Nascimento"}
             date={"26-mar-2024"}
-            onClick={navigateToJaspionPage}
+            onClick={() => navigateToPage('/dashboard/finance/BolsaExchange')}
+          />
+        </SwiperSlide>
+        <SwiperSlide style={{ display: "flex", justifyContent: "center" }}>
+          <WideCard
+            imageUrl={wolverine1997}
+            title={"X-MEN 97' bate Record!"}
+            description={
+              "Produção mutante, faz sucesso no mundo inteiro, confira (sem spoilers) o que aconteceu de relevante nos 2 primeiros episódios!"
+            }
+            author={"Alex Heisenberg"}
+            date={"26-mar-2024"}
+            onClick={() => navigateToPage('/dashboard/tv/x-men97')}
           />
         </SwiperSlide>
       </Swiper>
