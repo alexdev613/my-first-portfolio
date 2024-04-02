@@ -37,8 +37,10 @@ const widgetMenus: WidgetFooterMenu[] = [
         id: "1",
         title: "Contato",
         menus: [
-            { href: "#", label: "+55 (87) 98115-7269"},
+            { href: "/contact", label: "ENTRE EM CONTATO"},
             { href: "#", label: "(11) 4109-6235"},
+            { href: "https://wa.me/87981157269", label: "+55 (87) 98115-7269"},
+            { href: "mailto: alexjose68@hotmail.com", label: "email: alex@heisenberg.com"},
         ],
     },
     {
@@ -78,6 +80,13 @@ const Footer: React.FC = () => {
                     </MenuItem>
                 ))}
             </Menu>
+            {menu.id === "1" && (
+                <Title>
+                    <a href="/dashboard" style={{textDecoration: 'None', color: 'white'}}>
+                        Blog
+                    </a>
+                </Title>
+            )}
             {/* Adicione a imagem apenas para o item "Sobre Nós" */}
             {menu.title === "Sobre Nós" && (
                 <Image
