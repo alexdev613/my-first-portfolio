@@ -9,6 +9,7 @@ import benjaminGrahan from "../../../src/assets/images/benjaminGrahan.jpg";
 import akiraToriyama from "../../../src/assets/images/akiratoriyama.jpg";
 import b3 from "../../../src/assets/images/b3.jpg";
 import wolverine1997 from "../../../src/assets/images/wolverine97.jpg";
+import './styles.css';
 
 const CarouselToCard = () => {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const CarouselToCard = () => {
   };
 
   return (
-    <div>
+    <div style={{margin: '4rem 0'}}>
       <Swiper
         modules={[Navigation, EffectFade, Pagination, A11y, Autoplay]} // tem que colocar Navigation para as setas de navegação funcionarem!
         effect=""

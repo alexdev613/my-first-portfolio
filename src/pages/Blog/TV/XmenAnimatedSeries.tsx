@@ -1,9 +1,9 @@
 import Layout from "../../../components/BlogPageComponents/Layout/Layout";
 import styled from 'styled-components';
-import anuncie from '../../../assets/images/banner-anuncie-770x198.png';
 import AdvertiseBannerComponent from "../../../components/BlogPageComponents/AdvertiseBannerComponent/AdvertiseBannerComponent";
 import YouTubeVideo from "../../../components/BlogPageComponents/YouTubeVideo/YouTubeVideo";
 
+import anuncie from '../../../assets/images/banner-anuncie-770x198.png';
 import w from '../../../assets/images/wolverine97.jpg';
 import xmen from '../../../assets/images/x-men97.jpg';
 import magneto from '../../../assets/images/magneto-x-men97.jpg';
