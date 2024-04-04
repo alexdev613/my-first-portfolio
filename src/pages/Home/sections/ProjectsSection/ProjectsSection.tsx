@@ -15,8 +15,8 @@ const ProjectsSection = () => {
     ];
 
     return (
-        <Grid container spacing={3} justifyContent="center" mt={0} pb={10} bgcolor={"beige"} >
-            <h1>Área dos Projetos (Em construção) aguarde ...</h1>
+        <Grid container spacing={3} display={"flex"} textAlign='center' justifyContent="center" mt={0} pb={10} bgcolor={"beige"} >
+            <h1 style={{width: '70%'}}>Área dos Projetos (Em construção) aguarde ...</h1>
             {projects.map((project) => (
                 <Grid item xs={10} key={project.id}>
                     <Link to={project.link} style={{ textDecoration: "none" }}>
