@@ -108,6 +108,10 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
         }
     };
 
+    const handelCancel = () => {
+        reset();
+    }
+
     return (
         <Container>
             <Content>
@@ -350,7 +354,7 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
                     </DivContainer>
 
                     <BoxButtons>
-                        <CancelButton type='reset'>Cancaler</CancelButton>
+                        <CancelButton type='button' onClick={handelCancel}>Cancaler</CancelButton>
                         <SaveButton type='submit'>Salvar</SaveButton>
                     </BoxButtons>
                 </form>
