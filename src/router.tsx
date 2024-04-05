@@ -10,6 +10,7 @@ import JaspionExpoBrasil from "./pages/Blog/Expo/JaspionExpoBrasil";
 import BenjaminGrahan from "./pages/Blog/Finance/BenjaminGrahan";
 import BolsaExchange from "./pages/Blog/Finance/BolsaExchange";
 import AkiraToriyamaIsDead from "./pages/Blog/News/AkiraToriyamaIsDead/AkiraToriyamaIsDead";
+import FormYup from "./pages/Home/sections/Projects/Pages/FormYup";
 
 export const router = createBrowserRouter([
     { path: "/", element: <App /> },
@@ -22,5 +23,6 @@ export const router = createBrowserRouter([
     { path: "/dashboard/tech/whatsia", element: <WhatsIA /> },
     { path: "/dashboard/news/akiratoriyamaumlegado", element: <AkiraToriyamaIsDead />},
     { path: "/contact", element: <Contact /> },
-    { path: "/serviceterms", element: <ServiceTerms />}
+    { path: "/serviceterms", element: <ServiceTerms />},
+    { path: "/projects/formyup", element: <FormYup />}
   ]);

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ProjectsSection = () => {
     const projects = [
-        { id: 1, title: "Projeto 1", link: "/" },
+        { id: 1, title: "Formulário com validação + Tabela", link: "/projects/formyup" },
         { id: 2, title: "Projeto 2", link: "/" },
         { id: 3, title: "Projeto 3", link: "/" },
         { id: 4, title: "Projeto 4", link: "/" },
@@ -11,7 +11,6 @@ const ProjectsSection = () => {
         { id: 6, title: "Projeto 6", link: "/" },
         { id: 7, title: "Projeto 7", link: "/" },
         { id: 8, title: "Projeto 8", link: "/" },
-        // Adicione mais projetos conforme necessário
     ];
 
     return (
