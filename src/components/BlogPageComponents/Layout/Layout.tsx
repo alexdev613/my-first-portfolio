@@ -69,7 +69,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   O Fantástico Jaspion, criado pelo profeta Edin, ele foi preparado para enfrentar o terrível Satan Goss...
                   Reviva a nostalgia da série que fez sucesso no Brasil e no Japão!
                 </p>
-                <a href='/dashboard/expo/jaspionexpo'>Leia Mais</a>
+                <a href='/dashboard/tv/jaspion'>Leia Mais</a>
               </div>
           </div>
           <div className='conteudo-lateral categories'>
