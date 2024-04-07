@@ -7,6 +7,7 @@ import anuncie from '../../../assets/images/banner-anuncie-770x198.png';
 import jaspion from '../../../assets/images/jaspion.webp';
 import jaspion2 from '../../../assets/images/jaspion-elenco.jpg';
 import jaspionprime from '../../../assets/images/jaspion-primevideo.png';
+import { Link } from "react-router-dom";
 
 
 const ResponsiveImage = styled.img`
@@ -124,10 +125,10 @@ const Jaspion = () => {
 
           <MainContentWrapper>
           <TitlePost>Você também poderá se interessar: Jaspion Expo Brasil</TitlePost>
-          <a href="/dashboard/expo/jaspionexpo" style={{textDecoration: 'none'}}>
-            <p style={{ color: "black" }}>Clique na imagem para ser direcionado até a página!</p> 
-            <ResponsiveImage src={jaspion} />
-          </a>
+          <Link to={"/dashboard/expo/jaspionexpo"} style={{textDecoration: 'none'}}>
+              <p style={{ color: "black" }}>Clique na imagem para ser direcionado até a página!</p> 
+              <ResponsiveImage src={jaspion} />
+          </Link>
 
           <b>
             <p>

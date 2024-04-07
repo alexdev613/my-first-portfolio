@@ -32,6 +32,7 @@ import w from "../../../assets/images/wolverine97.jpg";
 import advertise from '../../../assets/images/advertise.png';
 import chavinho from '../../../assets/images/chavinho.jpg';
 import NavBar from '../../NavBar/NavBar';
+import { Link } from 'react-router-dom';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -53,7 +54,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   Na visão de Graham, o investimento deve incluir a garantia de retorno sobre o capital investido,
                   incluindo ainda a taxa de variação da inflação.
                 </p>
-                <a href='/dashboard/finance/benjamingrahan'>Leia Mais</a>
+                <Link to={'/dashboard/finance/benjamingrahan'}>
+                  Leia Mais
+                </Link>
               </div>
               <div className='post-destaque'>
                 <h4>IA: O que é e como funciona?</h4>
@@ -61,7 +64,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   IA é tecnologia que simula inteligência humana, usando algoritmos e dados para aprender e resolver
                   problemas complexos de forma autônoma.
                 </p>
-                <a href='/dashboard/tech/whatsia'>Leia Mais</a>
+                <Link to={'/dashboard/tech/whatsia'}>
+                  Leia Mais
+                </Link>
               </div>
               <div className='post-destaque'>
                 <h4>Jaspion no Prime Video</h4>
@@ -69,7 +74,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   O Fantástico Jaspion, criado pelo profeta Edin, ele foi preparado para enfrentar o terrível Satan Goss...
                   Reviva a nostalgia da série que fez sucesso no Brasil e no Japão!
                 </p>
-                <a href='/dashboard/tv/jaspion'>Leia Mais</a>
+                <Link to={'/dashboard/tv/jaspion'}>
+                  Leia Mais
+                </Link>
               </div>
           </div>
           <div className='conteudo-lateral categories'>

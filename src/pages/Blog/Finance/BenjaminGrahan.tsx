@@ -10,6 +10,7 @@ import benjamin3 from "../../../assets/images/benjaminGrahan.webp";
 import oInvestidorInteligente from "../../../assets/images/o-investidor-inteligente.jpg";
 import securityAnalysis from "../../../assets/images/security-analysis.jpg";
 import B3BrasilBolsaBalcao from "../../../assets/images/B3-Bolsa.jpg";
+import { Link } from "react-router-dom";
 
 const ResponsiveImage = styled.img`
   width: 60%; /* Largura da imagem em relação ao contêiner pai */
@@ -87,7 +88,7 @@ const BenjaminGrahan = () => {
             
             <br />
             <p>
-                Benjamin Graham é uma figura entre os grandes nomes do universo dos investimentos. Além disso, ele é reconhecido como o pioneiro da abordagem <a href="">buy and hold</a>, que foi posteriormente adotada por seu seguidor renomado, o magnata Warren Buffet.
+                Benjamin Graham é uma figura entre os grandes nomes do universo dos investimentos. Além disso, ele é reconhecido como o pioneiro da abordagem <Link to={""}>buy and hold</Link>, que foi posteriormente adotada por seu seguidor renomado, o magnata Warren Buffet.
             </p>
 
             <p>
@@ -320,11 +321,11 @@ const BenjaminGrahan = () => {
 
           <MainContentWrapper>
           <TitlePost>Você também poderá se interessar: B3 a Bolsa de Valores do Brasil!</TitlePost>
-          <a href="/dashboard/finance/BolsaExchange" style={{textDecoration: 'none'}}>
+          <Link to={"/dashboard/finance/BolsaExchange"} style={{textDecoration: 'none'}}>
             <p style={{ color: "black" }}>Clique na imagem para ser direcionado até a página!</p> 
             <ResponsiveImage src={B3BrasilBolsaBalcao} />
-          </a>
-
+          </Link>
+          
           <b>
             <p>
                 Conheça mais sobre a Bolsa de Valores do Brasil!
