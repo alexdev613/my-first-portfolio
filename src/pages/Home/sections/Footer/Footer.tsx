@@ -82,9 +82,9 @@ const Footer: React.FC = () => {
             </Menu>
             {menu.id === "1" && (
                 <Title>
-                    <a href="/dashboard" style={{textDecoration: 'None', color: 'white'}}>
+                    <Link to={"/dashboard"} style={{textDecoration: 'None', color: 'white'}}>
                         Blog
-                    </a>
+                    </Link>
                 </Title>
             )}
             {/* Adicione a imagem apenas para o item "Sobre Nós" */}
