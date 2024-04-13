@@ -35,8 +35,6 @@ import chavinho from '../../../assets/images/chavinho.jpg';
 import NavBar from '../../NavBar/NavBar';
 import { Link } from 'react-router-dom';
 import MicroCard from '../../MicroCard/MicroCard';
-import CarouselToCard from '../../CarouselToCard/CarouselTocard';
-import MiniCard from '../../MiniCard/MiniCard';
 
 interface LayoutProps {
   children: React.ReactNode;
