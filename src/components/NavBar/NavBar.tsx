@@ -17,10 +17,23 @@ const NavBar: React.FC<NavBarProps> = ({ position }) => {
         <>
             <AppBar position={position}>
                 <StyledToolbar>
-                    <MenuItem>About</MenuItem>
-                    <MenuItem>Skills</MenuItem>
                     <MenuItem>
-                            Projects
+                        <Link
+                            to="/"
+                            style={{ textDecoration: "inherit", color: "#fff" }}
+                        >
+                                Home
+                        </Link>
+                    </MenuItem>
+                    {/* <MenuItem>Skills</MenuItem>
+                    <MenuItem>Projects</MenuItem> */}
+                    <MenuItem>
+                        <Link
+                            to="/dashboard"
+                            style={{ textDecoration: "inherit", color: "#fff" }}
+                        >
+                            Blog
+                        </Link>
                     </MenuItem>
                     <MenuItem>
                         <Link
@@ -28,14 +41,6 @@ const NavBar: React.FC<NavBarProps> = ({ position }) => {
                             style={{ textDecoration: "inherit", color: "#fff" }}
                         >
                                 Contact
-                        </Link>
-                    </MenuItem>
-                    <MenuItem>
-                        <Link
-                            to="/dashboard"
-                            style={{ textDecoration: "inherit", color: "#fff" }}
-                        >
-                            Blog
                         </Link>
                     </MenuItem>
                 </StyledToolbar>
