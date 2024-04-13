@@ -178,8 +178,8 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
                                         {...register('ddiNumber', {required:'true'})}
                                         style={{ borderColor: errors.ddiNumber ? 'red': '' }}
                                     >
-                                        <option value=''>
-                                            --
+                                        <option selected disabled value=''>
+                                            
                                         </option>
                                         <option value={+55}>+55</option>
                                     </select>
@@ -301,7 +301,8 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
                                     {...register('address.state', {required:'true'})}
                                     style={{ borderColor: errors.address?.state ? 'red': '' }}
                                 >
-                                    <option value=""> </option>
+                                    <option selected disabled value="">Selecione</option>
+
                                     <option value="AC">AC</option>
                                     <option value="AL">AL</option>
                                     <option value="AP">AP</option>

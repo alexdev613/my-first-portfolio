@@ -51,12 +51,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className='conteudo-lateral'>
             <div className='post-destaque'>
             <h3>DESTAQUES</h3>
-                <h4>Benjamin Grahan, Investidor Inteligente</h4>
+                <h4>Benjamin Graham, Investidor Inteligente</h4>
                 <p>
                   Na visão de Graham, o investimento deve incluir a garantia de retorno sobre o capital investido,
                   incluindo ainda a taxa de variação da inflação.
                 </p>
-                <Link to={'/dashboard/finance/benjamingrahan'}>
+                <Link to={'/dashboard/finance/benjamingraham'}>
                   Leia Mais
                 </Link>
               </div>
@@ -93,7 +93,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <a href="">Jogos</a>
               </div>
           </div>
-
+          
           <div className='conteudo-lateral categories'>
             <AdvertiseHere >
               <img src={stars} alt="" />
@@ -181,7 +181,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </SidebarWrapper>
         <ComponenteNovo>
           <MicroCard imageUrl={universe} title={'Horóscopo'}  titleColor={'green'} text={'O que os astros dizem sobre o seu signo para esta semama? Um big bang de emoções pros signos de água!'} />
-          <MicroCard imageUrl={w} title={'Quadrinhos'} titleColor={'blue'} text={'Droga! Wolverine fatia mais um! Mas os X-MEN fingem quena da aconteceu! Mas será possível?'} />
+          <MicroCard imageUrl={w} title={'Quadrinhos'} titleColor={'blue'} text={'Droga! Wolverine fatia mais um! Mas os X-MEN fingem que nada aconteceu! Mas será possível?'} />
           <MicroCard imageUrl={chavinho} title={'Tech'} titleColor={'red'} text={'Tecnologia da Informação, é uma área promissora, que disponibiliza muitas vagas de trabalho no Brasil e no mundo!'} />
         </ComponenteNovo>
       </ContentWrapper>

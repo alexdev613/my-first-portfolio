@@ -6,7 +6,7 @@ import YouTubeVideo from "../../../components/BlogPageComponents/YouTubeVideo/Yo
 import anuncie from "../../../assets/images/banner-anuncie-770x198.png";
 import benjamin from "../../../assets/images/benjamin-graham-qual-sua estrategia.jpg";
 import benjamin2 from "../../../assets/images/Benjamin-Graham-wikpedia.jpg";
-import benjamin3 from "../../../assets/images/benjaminGrahan.webp";
+import benjamin3 from "../../../assets/images/benjaminGraham.webp";
 import oInvestidorInteligente from "../../../assets/images/o-investidor-inteligente.jpg";
 import securityAnalysis from "../../../assets/images/security-analysis.jpg";
 import B3BrasilBolsaBalcao from "../../../assets/images/B3-Bolsa.jpg";
@@ -78,7 +78,7 @@ const DatePost = styled.span`
 `;
 
 
-const BenjaminGrahan = () => {
+const BenjaminGraham = () => {
     return (
         <Layout>
           <AdvertiseBannerComponent src={anuncie} />
@@ -219,7 +219,7 @@ const BenjaminGrahan = () => {
                 Por outro lado, o <b>investidor passivo</b> é aquele que não dispõe de tempo ou interesse para se aprofundar no mercado. Diante disso, Graham sugere que esse tipo de investidor opte por investir em índices ou em carteiras que replicam esses índices.
             </p>
             <br />
-            <h1>A fórmula de Grahan</h1>
+            <h1>A fórmula de Graham</h1>
 
             <p>
                 Benjamin Graham também ganhou reconhecimento global devido à <b>Fórmula de Graham</b>, uma equação que ele afirmava poder calcular o Valor Intrínseco (valor justo) de uma ação.
@@ -340,4 +340,4 @@ const BenjaminGrahan = () => {
     )
 }
 
-export default BenjaminGrahan;
+export default BenjaminGraham;

@@ -45,15 +45,16 @@ export const ContentContainer = styled.div`
   padding: 8px;
 `;
 
-export const Title = styled.h3`
+export const Title = styled.h4`
   font-family: monospace;
-  font-size: 14px;
+  font-size: 13.5px;
   margin: 0; /* Remova a margem padrão */
   text-transform: uppercase;
   color: ${props => props.color};
 `;
 
 export const Text = styled.p`
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 13px;
   font-weight: 600;
   margin: 4px 0; /* Ajuste a margem para cima e para baixo */
