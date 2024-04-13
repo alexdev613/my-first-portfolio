@@ -224,11 +224,20 @@ export const RowLink = styled.a`
 
 export const ComponenteNovo = styled.section`
   width: 100%;
-  height: 250px;
+  height: auto;
   background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 
   @media (min-width: 900px) {
     display: none;
+  }
+
+  @media (max-width: 740px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 

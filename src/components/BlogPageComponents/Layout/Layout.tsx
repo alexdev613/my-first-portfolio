@@ -28,11 +28,15 @@ import "swiper/swiper-bundle.css";
 import { EffectFade, Pagination, Autoplay } from 'swiper/modules';
 
 import stars from "../../../assets/images/stars.gif";
+import universe from "../../../assets/images/universe.jpg";
 import w from "../../../assets/images/wolverine97.jpg";
 import advertise from '../../../assets/images/advertise.png';
 import chavinho from '../../../assets/images/chavinho.jpg';
 import NavBar from '../../NavBar/NavBar';
 import { Link } from 'react-router-dom';
+import MicroCard from '../../MicroCard/MicroCard';
+import CarouselToCard from '../../CarouselToCard/CarouselTocard';
+import MiniCard from '../../MiniCard/MiniCard';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -178,7 +182,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </CarouselContainer>
         </SidebarWrapper>
         <ComponenteNovo>
-          OLÁ, não se esqueça de me estilizar e programar!
+          <MicroCard imageUrl={universe} title={'Horóscopo'}  titleColor={'green'} text={'O que os astros dizem sobre o seu signo para esta semama? Um big bang de emoções pros signos de água!'} />
+          <MicroCard imageUrl={w} title={'Quadrinhos'} titleColor={'blue'} text={'Droga! Wolverine fatia mais um! Mas os X-MEN fingem quena da aconteceu! Mas será possível?'} />
+          <MicroCard imageUrl={chavinho} title={'Tech'} titleColor={'red'} text={'Tecnologia da Informação, é uma área promissora, que disponibiliza muitas vagas de trabalho no Brasil e no mundo!'} />
         </ComponenteNovo>
       </ContentWrapper>
       <FooterSpace>
