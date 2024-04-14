@@ -5,7 +5,7 @@ import { EffectFade, Pagination, A11y, Navigation, Autoplay } from "swiper/modul
 import { To, useNavigate } from "react-router-dom";
 import WideCard from "../WideCard/WideCard";
 import jaspionImage from "../../../src/assets/images/jaspion.webp";
-import benjaminGrahan from "../../../src/assets/images/benjaminGrahan.jpg";
+import benjaminGraham from "../../../src/assets/images/benjaminGraham.jpg";
 import akiraToriyama from "../../../src/assets/images/akiratoriyama.jpg";
 import b3 from "../../../src/assets/images/b3.jpg";
 import wolverine1997 from "../../../src/assets/images/wolverine97.jpg";
@@ -62,14 +62,14 @@ const CarouselToCard = () => {
         </SwiperSlide>
         <SwiperSlide style={{ display: "flex", justifyContent: "center" }}>
           <WideCard
-            imageUrl={benjaminGrahan}
-            title={"Benjamin Grahan, Investidor Inteligente"}
+            imageUrl={benjaminGraham}
+            title={"Benjamin Graham, Investidor Inteligente"}
             description={
               "Na visão de Graham, o investimento deve incluir a garantia de retorno sobre o capital investido, incluindo ainda a taxa de variação da inflação."
             }
             author={"Alex Heisenberg"}
             date={"25-mar-2024"}
-            onClick={() => navigateToPage('/dashboard/finance/benjamingrahan')}
+            onClick={() => navigateToPage('/dashboard/finance/benjamingraham')}
           />
         </SwiperSlide>
         <SwiperSlide style={{ display: "flex", justifyContent: "center" }}>
