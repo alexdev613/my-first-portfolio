@@ -3,13 +3,12 @@ import "swiper/swiper-bundle.css";
 import { EffectFade, Pagination, A11y, Navigation, Autoplay } from "swiper/modules";
 
 import { To, useNavigate } from "react-router-dom";
-import WideCard from "../WideCard/WideCard";
+import WideCard from "../BlogPageComponents/BlogCards/WideCard/WideCard";
 import jaspionImage from "../../../src/assets/images/jaspion.webp";
 import benjaminGraham from "../../../src/assets/images/benjaminGraham.jpg";
 import akiraToriyama from "../../../src/assets/images/akiratoriyama.jpg";
 import b3 from "../../../src/assets/images/b3.jpg";
 import wolverine1997 from "../../../src/assets/images/wolverine97.jpg";
-import './styles.css';
 
 const CarouselToCard = () => {
   const navigate = useNavigate();
