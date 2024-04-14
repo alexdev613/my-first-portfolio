@@ -3,14 +3,14 @@ import App from "./App";
 import Dashboard from "./routes/Dashboard";
 import Contact from "./routes/Contact";
 import ServiceTerms from "./routes/ServiceTerms";
-import Jaspion from "./pages/Blog/TV/Jaspion";
-import WhatsIA from "./pages/Blog/Tech/WhatsIA";
-import XmenAnimatedSeries from "./pages/Blog/TV/XmenAnimatedSeries";
-import JaspionExpoBrasil from "./pages/Blog/Expo/JaspionExpoBrasil";
-import BenjaminGraham from "./pages/Blog/Finance/BenjaminGraham";
-import BolsaExchange from "./pages/Blog/Finance/BolsaExchange";
+import Jaspion from "./pages/Blog/TV/Jaspion/Jaspion";
+import WhatsIA from "./pages/Blog/Tech/WhatsIA/WhatsIA";
+import XmenAnimatedSeries from "./pages/Blog/TV/XmenAnimatedSeries/XmenAnimatedSeries";
+import JaspionExpoBrasil from "./pages/Blog/Expo/JaspionExpoBrasil/JaspionExpoBrasil";
+import BenjaminGraham from "./pages/Blog/Finance/BenjaminGraham/BenjaminGraham";
+import BolsaExchange from "./pages/Blog/Finance/BolsaExchange/BolsaExchange";
 import AkiraToriyamaIsDead from "./pages/Blog/News/AkiraToriyamaIsDead/AkiraToriyamaIsDead";
-import FormYup from "./pages/Home/sections/Projects/Pages/FormYup";
+import FormYup from "./pages/Home/sections/Projects/Pages/PageProject01/FormYup";
 
 export const router = createBrowserRouter([
     { path: "/", element: <App /> },

@@ -1,70 +1,22 @@
 import React from "react";
-import styled from "styled-components";
-import Layout from "../../../components/BlogPageComponents/Layout/Layout";
-import AdvertiseBannerComponent from "../../../components/BlogPageComponents/AdvertiseBannerComponent/AdvertiseBannerComponent";
+import Layout from "../../../../components/BlogPageComponents/Layout/Layout";
+import AdvertiseBannerComponent from "../../../../components/BlogPageComponents/AdvertiseBannerComponent/AdvertiseBannerComponent";
 import { Link } from "react-router-dom";
-import b3 from "../../../assets/images/B3-Bolsa.jpg";
-import acoes from "../../../assets/images/b3.jpg";
-import fiis from "../../../assets/images/fiis.jpg";
-import fiagros from "../../../assets/images/fiagors.jpg";
-import etfs from "../../../assets/images/etfs.png";
-import bdrs from "../../../assets/images/bdrs.webp";
-import anuncie from "../../../assets/images/banner-anuncie-770x198.png";
-import benjaminGraham from "../../../assets/images/Benjamin-Graham-wikpedia.jpg";
+import {
+  MainContentWrapper,
+  TitlePost,
+  DatePost,
+  ResponsiveImage
+} from "./styles";
 
-const ResponsiveImage = styled.img`
-  width: 60%;
-  max-width: 680px;
-  height: auto;
-  display: block;
-  min-width: 240px;
-  @media (max-width: 600px) {
-    width: 80%;
-  }
-  @media (max-width: 400px) {
-    width: 95%;
-  }
-`;
-
-const MainContentWrapper = styled.div`
-  padding: 0 20px;
-  box-sizing: border-box;
-  background-color: whitesmoke;
-  padding-bottom: 1rem;
-  margin-bottom: 20px;
-  p {
-    font-size: 14px;
-    line-height: 1.5rem;
-    text-align: justify;
-    @media (max-width: 352px) {
-      font-size: 11px;
-    }
-  }
-`;
-
-const TitlePost = styled.h2`
-  color: #004aad;
-  font-size: 24px;
-  line-height: auto;
-  font-weight: 900;
-  padding-top: 25px;
-  margin-bottom: 0px;
-  @media (max-width: 352px) {
-    font-size: 20px;
-    font-weight: 900;
-    padding-top: 16px;
-  }
-`;
-
-const DatePost = styled.span`
-  font-size: 0.8em;
-  font-weight: 600;
-  margin-left: 2px;
-  display: block;
-  @media (max-width: 352px) {
-    font-size: 0.64rem;
-  }
-`;
+import b3 from "../../../../assets/images/B3-Bolsa.jpg";
+import acoes from "../../../../assets/images/b3.jpg";
+import fiis from "../../../../assets/images/fiis.jpg";
+import fiagros from "../../../../assets/images/fiagors.jpg";
+import etfs from "../../../../assets/images/etfs.png";
+import bdrs from "../../../../assets/images/bdrs.webp";
+import anuncie from "../../../../assets/images/banner-anuncie-770x198.png";
+import benjaminGraham from "../../../../assets/images/Benjamin-Graham-wikpedia.jpg";
 
 const BolsaExchange: React.FC = () => {
   return (

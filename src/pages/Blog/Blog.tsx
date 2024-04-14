@@ -1,12 +1,12 @@
 import { Link, To, useNavigate } from "react-router-dom";
 import Footer from "../Home/sections/Footer/Footer";
 import { BodyContainer, MiniCardContainer, ProvisoryContainer } from "./styles";
-import MiniCard from "../../components/MiniCard/MiniCard";
+import MiniCard from "../../components/BlogPageComponents/BlogCards/MiniCard/MiniCard";
 import xmen from "../../../src/assets/images/x-men92.jpg";
 import jaspionSword from "../../../src/assets/images/jaspion2.jpg";
 import jaspion from "../../../src/assets/images/jaspion.webp";
 import IA from "../../../src/assets/images/IA.jpg";
-import WideCard from "../../components/WideCard/WideCard";
+import WideCard from "../../components/BlogPageComponents/BlogCards/WideCard/WideCard";
 import CarouselToCard from "../../components/CarouselToCard/CarouselTocard";
 import NavBar from "../../components/NavBar/NavBar";
 import Header from "../../components/BlogPageComponents/Header/Header";

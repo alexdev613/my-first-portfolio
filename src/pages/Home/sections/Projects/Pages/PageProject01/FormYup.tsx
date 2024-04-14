@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import BusinessRegistrationForm, { CompanyData } from "../BusinessRegistrationForm/BusinessRegistrationForm";
-import BusinessStyledTable from "../BusinessStyledTable/BusinessStyledTable";
+import BusinessRegistrationForm, { CompanyData } from "../../Project01/BusinessRegistrationForm/BusinessRegistrationForm";
+import BusinessStyledTable from "../../Project01/BusinessStyledTable/BusinessStyledTable";
 import { BodyPage, Title } from "./styles";
 import { Link } from "react-router-dom";
 

@@ -34,7 +34,7 @@ import advertise from '../../../assets/images/advertise.png';
 import chavinho from '../../../assets/images/chavinho.jpg';
 import NavBar from '../../NavBar/NavBar';
 import { Link } from 'react-router-dom';
-import MicroCard from '../../MicroCard/MicroCard';
+import MicroCard from '../BlogCards/MicroCard/MicroCard';
 
 interface LayoutProps {
   children: React.ReactNode;
