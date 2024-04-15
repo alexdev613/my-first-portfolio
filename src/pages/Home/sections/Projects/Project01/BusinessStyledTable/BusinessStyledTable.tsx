@@ -21,7 +21,7 @@ const BusinessStyledTable: React.FC<BusinessStyledTableProps> = ({ companyData }
         <tr>
           <TableHeaderCell>Nome da Empresa</TableHeaderCell>
           <TableHeaderCell onlyWeb>CNPJ</TableHeaderCell>
-          <TableHeaderCell>E-mail</TableHeaderCell>
+          <TableHeaderCell onlyWeb>E-mail</TableHeaderCell>
           <TableHeaderCell>Telefone</TableHeaderCell>
           <TableHeaderCell onlyWeb>Endereço</TableHeaderCell>
         </tr>
@@ -31,7 +31,7 @@ const BusinessStyledTable: React.FC<BusinessStyledTableProps> = ({ companyData }
           <TableRow key={index}>
             <TableDataCell minWidth="140px">{company.company}</TableDataCell>
             <TableDataCell onlyWeb minWidth="140px">{company.cnpj}</TableDataCell>
-            <TableDataCell>{company.email}</TableDataCell>
+            <TableDataCell onlyWeb>{company.email}</TableDataCell>
             <TableDataCell minWidth="140px">(+{company.ddiNumber}) {company.phone}</TableDataCell>
             <TableDataCell onlyWeb minWidth="280px">
               {`${company.address.street},

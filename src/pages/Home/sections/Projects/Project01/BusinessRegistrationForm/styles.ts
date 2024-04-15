@@ -17,7 +17,7 @@ export const Content = styled.div`
     border-radius: 1.875rem;
 
     @media (max-width: 900px) {
-        width: 24rem;
+        width: 20rem;
     }
 `;
 
@@ -27,8 +27,9 @@ export const DivContainer = styled.div`
     display: flex;
     flex-direction: row;
     gap: 1.875rem;
+    
     @media (max-width: 900px) {
-        width: 20.125rem;
+        width: 16.125rem;
         flex-direction: column;
         gap: 0rem;
     }
@@ -78,7 +79,7 @@ export const ExclusiveRowBox = styled.div`
     .Phone {
         width: 17.275rem;
         @media (max-width: 900px) {
-            width: 14.275rem;
+            width: 10.275rem;
         }
     }
 
@@ -90,13 +91,18 @@ export const ExclusiveRowBox = styled.div`
     .UF {
         width: 7.3125rem;
         margin-right: 1rem;
+
+        @media (max-width: 900px){
+            width: 5.3125rem ;
+            font-size: 10px;
+        }
     }
 
     .City {
         width: 14.8rem;
         
         @media (max-width: 900px){
-            width: 11.8rem ;
+            width: 9.8rem ;
         }
     }
 `;
@@ -141,7 +147,7 @@ export const MessageError = styled.p`
 
     &.pNumber {
         bottom: 1.25rem;
-        left: -0.5rem;
+        left: -1.875rem;
 
         @media (max-width: 900px) {
             bottom: 0rem;
@@ -182,26 +188,31 @@ export const BoxForm = styled.div`
 
     .linkCep > a{
         color: inherit;
-        margin-left: 70%;
+        margin-left: 56%;
     }
 
     .street {
         width: 15.825rem;
         margin-right: 1rem;
+
         @media (max-width: 900px) {
-            width: 12.775rem;
+            width: 10.775rem;
         }
     }
 
     .number {
         width: 6.35rem;
+        
+        @media (max-width: 900px) {
+            width: 4.35rem;
+        }
     }
 
     .complement {
         width: 48.15rem;
         
         @media (max-width: 900px) {
-        width: 20.125rem;
+        width: 16.125rem;
     }
     }
 `;
@@ -246,7 +257,7 @@ export const CancelButton = styled.button`
 
     @media (max-width: 900px) {
         height: 2.75rem;
-        width: 9.5rem;
+        width: 7.5rem;
     }
 `;
 
@@ -276,6 +287,6 @@ export const SaveButton = styled.button`
 
     @media (max-width: 900px) {
         height: 2.75rem;
-        width: 9.5rem;
+        width: 7.5rem;
     }
 `;
