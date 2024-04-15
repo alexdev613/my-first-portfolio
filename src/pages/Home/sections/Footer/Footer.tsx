@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
     );
 
     return (
-        <FooterContainer>
+        <FooterContainer id="contact">
             <FooterContent>
                 <Column>
                     <Image src={logo} alt="Logo Chemical Alex" />
