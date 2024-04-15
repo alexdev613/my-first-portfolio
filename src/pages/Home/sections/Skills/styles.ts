@@ -29,9 +29,9 @@ export const Content = styled.div`
     min-width: 230px;
     height: fit-content;
     padding: 1.25rem;
-    background-color: darkblue;
+    background-color: #343434;
     border: 1px solid #bdbdbd;
-    border-radius: 1.875rem;
+    border-radius: 1.25rem;
     margin-bottom: 3.5rem;
 
     @media (max-width:900px) {
