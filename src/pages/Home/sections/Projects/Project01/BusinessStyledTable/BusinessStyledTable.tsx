@@ -20,20 +20,20 @@ const BusinessStyledTable: React.FC<BusinessStyledTableProps> = ({ companyData }
       <TableHeader>
         <tr>
           <TableHeaderCell>Nome da Empresa</TableHeaderCell>
-          <TableHeaderCell>CNPJ</TableHeaderCell>
+          <TableHeaderCell onlyWeb>CNPJ</TableHeaderCell>
           <TableHeaderCell>E-mail</TableHeaderCell>
           <TableHeaderCell>Telefone</TableHeaderCell>
-          <TableHeaderCell>Endereço</TableHeaderCell>
+          <TableHeaderCell onlyWeb>Endereço</TableHeaderCell>
         </tr>
       </TableHeader>
       <TableBody>
         {companyData.map((company, index) => (
           <TableRow key={index}>
-            <TableDataCell>{company.company}</TableDataCell>
-            <TableDataCell>{company.cnpj}</TableDataCell>
+            <TableDataCell minWidth="150px">{company.company}</TableDataCell>
+            <TableDataCell onlyWeb minWidth="150px">{company.cnpj}</TableDataCell>
             <TableDataCell>{company.email}</TableDataCell>
-            <TableDataCell>{company.phone}</TableDataCell>
-            <TableDataCell minWidth="360px">
+            <TableDataCell minWidth="150px">(+{company.ddiNumber}) {company.phone}</TableDataCell>
+            <TableDataCell onlyWeb minWidth="280px">
               {`${company.address.street},
               ${company.address.number},
               ${company.address.complement},
