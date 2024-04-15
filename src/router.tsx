@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import Dashboard from "./routes/Dashboard";
+import AuthorBiography from "./routes/AuthorBiography";
 import Contact from "./routes/Contact";
+import Dashboard from "./routes/Dashboard";
 import ServiceTerms from "./routes/ServiceTerms";
 import Jaspion from "./pages/Blog/TV/Jaspion/Jaspion";
 import WhatsIA from "./pages/Blog/Tech/WhatsIA/WhatsIA";
@@ -23,6 +24,7 @@ export const router = createBrowserRouter([
     { path: "/dashboard/tech/whatsia", element: <WhatsIA /> },
     { path: "/dashboard/news/akiratoriyamaumlegado", element: <AkiraToriyamaIsDead />},
     { path: "/contact", element: <Contact /> },
+    { path: "/biography", element: <AuthorBiography />},
     { path: "/serviceterms", element: <ServiceTerms />},
-    { path: "/projects/formyup", element: <FormYup />}
+    { path: "/projects/formyup", element: <FormYup />},
   ]);
