@@ -355,7 +355,7 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
                                     />
                                 </ExclusiveRowBox>
                                     {errors.address?.city?.type === 'required' && (
-                                        <MessageError>{errors.address.city.message}</MessageError>
+                                        <MessageError className='pCity'>{errors.address.city.message}</MessageError>
                                     )}
                             </BoxForm>
                         </ExclusiveRowBox>

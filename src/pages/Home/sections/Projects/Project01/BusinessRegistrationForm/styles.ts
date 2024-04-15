@@ -153,6 +153,12 @@ export const MessageError = styled.p`
             bottom: 0rem;
         }
     }
+
+    &.pCity {
+        @media (max-width: 900px) {
+            left: 1rem;
+        }
+    }
 `;
 
 export const BoxForm = styled.div`
