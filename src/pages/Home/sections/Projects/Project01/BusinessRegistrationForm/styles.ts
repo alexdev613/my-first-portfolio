@@ -10,18 +10,28 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60rem;
+    width: 52rem;
     padding: 1.875rem;
     background-color: whitesmoke;
     border: 1px solid #bdbdbd;
     border-radius: 1.875rem;
+
+    @media (max-width: 900px) {
+        width: 30rem;
+    }
 `;
 
 export const DivContainer = styled.div`
+    box-sizing: border-box;
     width: 100%;
     display: flex;
     flex-direction: row;
     gap: 1.875rem;
+    @media (max-width: 900px) {
+        width: 26.125rem;
+        flex-direction: column;
+        gap: 0rem;
+    }
 `;
 
 export const Label = styled.label`
@@ -37,7 +47,7 @@ export const Input = styled.input`
     border-radius: 1.125rem;
     border: 1px solid #007A6C;
     box-shadow: 0px 0px 5px rgba(0, 0, 0,0.1);
-    width: 27.125rem;
+    width: 23.125rem;
     height: 2.75rem;
     align-items: center;
     text-indent: 20px;
@@ -55,6 +65,10 @@ export const Input = styled.input`
     &::placeholder {
         letter-spacing: 0;
     }
+
+    @media (max-width: 900px) {
+        width: 100%;
+    }
 `;
 
 export const ExclusiveRowBox = styled.div`
@@ -62,7 +76,10 @@ export const ExclusiveRowBox = styled.div`
     flex-direction: row;
 
     .Phone {
-        width: 21.25rem;
+        width: 17.275rem;
+        @media (max-width: 900px) {
+            width: 20.275rem;
+        }
     }
 
     .DDI {
@@ -72,11 +89,62 @@ export const ExclusiveRowBox = styled.div`
 
     .UF {
         width: 7.3125rem;
-        margin-right: -1rem;
+        margin-right: 1rem;
     }
 
     .City {
-        width: 18.875rem;
+        width: 14.8rem;
+        @media (max-width: 900px){
+            width: 17.8rem ;
+        }
+    }
+`;
+
+export const MessageError = styled.p`
+    position: absolute; // usei absolute para poder usar bottom e não quebrar o layout aumentando a altura do formulário era importante pra mim.
+    bottom: 0px;
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1.125rem;
+    margin-left: 0.75rem;
+    color: red;
+    width: max-content; // permite que o parágrafo extravase o box
+    
+    &.pEmail {
+        bottom: 1.25rem;
+
+        @media (max-width: 900px) {
+            bottom: 0.2rem;
+        }
+    }
+
+    &.pDdi {
+        bottom: 0.25rem;
+        left: -0.5rem;
+    }
+
+    &.pPhone {
+        bottom: 0.2rem;
+    }
+
+    &.pCep {
+        bottom: 1.25rem;
+    }
+
+    &.pStreet {
+        bottom: 1.25rem;
+        @media (max-width: 900px) {
+            bottom: 0rem;
+        }
+    }
+
+    &.pNumber {
+        bottom: 1.25rem;
+        left: -0.5rem;
+
+        @media (max-width: 900px) {
+            bottom: 0rem;
+        }
     }
 `;
 
@@ -89,23 +157,12 @@ export const BoxForm = styled.div`
 
     span {
         font-size: 0.75rem;
-        font-weight: 300;
+        font-weight: 400;
         line-height: 1.125rem;
-        margin-left: 1rem;
         margin-top: 0.25rem;
         color: #007a6c;
         text-decoration: underline;
-    }
 
-    p {
-        position: absolute;
-        bottom: 8px;
-        font-size: 0.75rem;
-        font-weight: 300;
-        line-height: 1.125rem;
-        margin-left: 1rem;
-        margin-top: 0.25rem;
-        color: #666;
     }
 
     select {
@@ -122,16 +179,28 @@ export const BoxForm = styled.div`
         font-size: 1.125rem;
     }
 
+    .linkCep > a{
+        color: inherit;
+        margin-left: 70%;
+    }
+
     .street {
-        width: 18.875rem;
+        width: 15.825rem;
+        margin-right: 1rem;
+        @media (max-width: 900px) {
+            width: 18.775rem;
+        }
     }
 
     .number {
-        width: 6.125rem;
+        width: 6.35rem;
     }
 
     .complement {
-        width: 56.125rem;
+        width: 48.15rem;
+        @media (max-width: 900px) {
+        width: 26.125rem;
+    }
     }
 `;
 
@@ -142,6 +211,11 @@ export const BoxButtons = styled.div`
     justify-content: right;
     margin-top: 1.5rem;
     gap: 1rem;
+
+    @media (max-width: 900px) {
+        justify-content: center;
+        padding-bottom: 1.5rem;
+    }
 `;
 
 export const CancelButton = styled.button`
@@ -157,10 +231,20 @@ export const CancelButton = styled.button`
     background-color: whitesmoke;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+
+    &:active {
+        transform: scale(0.72);
+    }
 
     &:hover {
         background-color: #007a6c;
         color: white;
+    }
+
+    @media (max-width: 900px) {
+        height: 2.75rem;
+        width: 9.5rem;
     }
 `;
 
@@ -177,9 +261,19 @@ export const SaveButton = styled.button`
     background-color: #007a6c;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+
+    &:active {
+        transform: scale(0.72);
+    }
 
     &:hover {
         background-color: white;
         color: #007a6c;
+    }
+
+    @media (max-width: 900px) {
+        height: 2.75rem;
+        width: 9.5rem;
     }
 `;

@@ -10,6 +10,7 @@ import {
     BoxForm,
     Label,
     ExclusiveRowBox,
+    MessageError,
     Input,
     BoxButtons,
     SaveButton,
@@ -129,7 +130,7 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
                                 style={{ borderColor: errors.company ? 'red': '' }}
                             />
                             {errors.company?.type === 'required' && (
-                                <p style={{ color: 'red', bottom: '0px'}}>{errors.company.message}</p>
+                                <MessageError>{errors.company.message}</MessageError>
                             )}
                         </BoxForm>
                         <BoxForm>
@@ -144,7 +145,7 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
                                 style={{ borderColor: errors.cnpj ? 'red': '' }}
                             />
                             {errors.cnpj?.type === 'required' && (
-                                <p style={{ color: 'red' , bottom: '0px'}}>{errors.cnpj.message}</p>
+                                <MessageError>{errors.cnpj.message}</MessageError>
                             )}
                         </BoxForm>
                     </DivContainer>
@@ -160,11 +161,11 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
                                 {...register('email', {required: true})}
                                 style={{ borderColor: errors.email ? 'red' : '' }}
                             />
-                            <em style={{marginTop: '4px', marginLeft: '16px', fontSize: '12px', fontWeight: '400'}}>
+                            <em style={{marginTop: '4px', marginLeft: '12px', fontSize: '10px', fontWeight: '400'}}>
                                 É para este e-mail que vamos enviar as confirmações de reserva*
                             </em>
                             {errors.email?.type === 'required' && (
-                                <p style={{ color: 'red', bottom: '16px' }}>{errors.email.message}</p>
+                                <MessageError className='pEmail'>{errors.email.message}</MessageError>
                             )}
                         </BoxForm>
                         <BoxForm>
@@ -181,10 +182,12 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
                                         <option selected disabled value=''>
                                             
                                         </option>
+                                        <option value={+1}>+1</option>
+                                        <option value={+54}>+54</option>
                                         <option value={+55}>+55</option>
                                     </select>
                                     {errors.ddiNumber?.type === 'required' && (
-                                        <p style={{color: 'red', bottom: '-14px'}}>{errors.ddiNumber.message}</p>
+                                        <MessageError className='pDdi'>{errors.ddiNumber.message}</MessageError>
                                     )}
                                 </BoxForm>
                                 <BoxForm>
@@ -199,7 +202,7 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
                                         style={{ borderColor: errors.phone ? 'red': '' }}
                                     />
                                     {errors.phone?.type === 'required' && (
-                                        <p style={{ color: 'red', bottom: '4px' }}>{errors.phone.message}</p>
+                                        <MessageError className='pPhone'>{errors.phone.message}</MessageError>
                                     )}
                                 </BoxForm>
                             </ExclusiveRowBox>
@@ -217,48 +220,49 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
                                 {...register('address.cep', {required: 'true'})}
                                 style={{ borderColor: errors.address?.cep ? 'red' : '' }}
                             />
-                            <span>
+                            <span className='linkCep'>
                                 <a
                                     href="https://buscacepinter.correios.com.br/app/endereco/index.php"
                                     target='_blank'
                                     rel='noreferrer'
-                                    style={{color: '#007a6c', marginLeft: '320px'}}
                                 >
                                     Pesquisar CEP
                                 </a>
                             </span>
                             {errors.address?.cep?.type === 'required' && (
-                                <p style={{ color: 'red', bottom: '18px' }}>{errors.address.cep.message}</p>
+                                <MessageError className='pCep'>{errors.address.cep.message}</MessageError>
                             )}
                         </BoxForm>
-                        <BoxForm>
-                            <Label>Endereço (Logradouro)*</Label>
-                            <Input
-                                type='text'
-                                id='street'
-                                className='street'
-                                placeholder='Rua: Firmino Gonzales'
-                                {...register('address.street', {required: 'true'})}
-                                style={{ borderColor: errors.address?.street ? 'red' : '' }}
-                            />
-                            {errors.address?.street?.type === 'required' && (
-                                <p style={{ color: 'red', bottom: '18px' }}>{errors.address.street.message}</p>
-                            )}
-                        </BoxForm>
-                        <BoxForm>
-                            <Label>Número*</Label>
-                            <Input
-                                type='text'
-                                id='number'
-                                className='number'
-                                placeholder='55'
-                                {...register('address.number', {required: 'true'})}
-                                style={{ borderColor: errors.address?.number ? 'red' : '' }}
-                            />
-                            {errors.address?.number?.type === 'required' && (
-                                <p style={{ color: 'red', bottom: '2px' }}>{errors.address.number.message}</p>
-                            )}
-                        </BoxForm>
+                        <ExclusiveRowBox>
+                            <BoxForm>
+                                <Label>Endereço (Logradouro)*</Label>
+                                <Input
+                                    type='text'
+                                    id='street'
+                                    className='street'
+                                    placeholder='Rua: Firmino Gonzales'
+                                    {...register('address.street', {required: 'true'})}
+                                    style={{ borderColor: errors.address?.street ? 'red' : '' }}
+                                />
+                                {errors.address?.street?.type === 'required' && (
+                                    <MessageError className='pStreet'>{errors.address.street.message}</MessageError>
+                                )}
+                            </BoxForm>
+                            <BoxForm>
+                                <Label>Número*</Label>
+                                <Input
+                                    type='text'
+                                    id='number'
+                                    className='number'
+                                    placeholder='55'
+                                    {...register('address.number', {required: 'true'})}
+                                    style={{ borderColor: errors.address?.number ? 'red' : '' }}
+                                />
+                                {errors.address?.number?.type === 'required' && (
+                                    <MessageError className='pNumber'>{errors.address.number.message}</MessageError>
+                                )}
+                            </BoxForm>
+                        </ExclusiveRowBox>
                     </DivContainer>
 
                     <DivContainer>
@@ -273,7 +277,7 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
                                 style={{ borderColor: errors.address?.complement ? 'red' : '' }}
                             />
                             {errors.address?.complement?.type === 'required' && (
-                                <p style={{ color: 'red', bottom: '-2px' }}>{errors.address.complement.message}</p>
+                                <MessageError>{errors.address.complement.message}</MessageError>
                             )}
                         </BoxForm>
                     </DivContainer>
@@ -289,69 +293,72 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
                                 style={{ borderColor: errors.address?.neighborhood ? 'red' : '' }}
                             />
                             {errors.address?.neighborhood?.type === 'required' && (
-                                <p style={{ color: 'red', bottom: '-2px' }}>{errors.address.neighborhood.message}</p>
+                                <MessageError>{errors.address.neighborhood.message}</MessageError>
                             )}
                         </BoxForm>
-                        <BoxForm>
-                            <Label>Estado*</Label>
-                            <ExclusiveRowBox>
-                                <select
-                                    id='state'
-                                    className='UF'
-                                    {...register('address.state', {required:'true'})}
-                                    style={{ borderColor: errors.address?.state ? 'red': '' }}
-                                >
-                                    <option selected disabled value="">Selecione</option>
+                        <ExclusiveRowBox>
+                            <BoxForm>
+                                <Label>Estado*</Label>
 
-                                    <option value="AC">AC</option>
-                                    <option value="AL">AL</option>
-                                    <option value="AP">AP</option>
-                                    <option value="AM">AM</option>
-                                    <option value="BA">BA</option>
-                                    <option value="CE">CE</option>
-                                    <option value="DF">DF</option>
-                                    <option value="ES">ES</option>
-                                    <option value="GO">GO</option>
-                                    <option value="MA">MA</option>
-                                    <option value="MT">MT</option>
-                                    <option value="MS">MS</option>
-                                    <option value="MG">MG</option>
-                                    <option value="PA">PA</option>
-                                    <option value="PB">PB</option>
-                                    <option value="PR">PR</option>
-                                    <option value="PE">PE</option>
-                                    <option value="PI">PI</option>
-                                    <option value="RJ">RJ</option>
-                                    <option value="RN">RN</option>
-                                    <option value="RS">RS</option>
-                                    <option value="RO">RO</option>
-                                    <option value="RR">RR</option>
-                                    <option value="SC">SC</option>
-                                    <option value="SP">SP</option>
-                                    <option value="SE">SE</option>
-                                    <option value="TO">TO</option>
-                                </select>
-                            </ExclusiveRowBox>
-                                {errors.address?.state?.type === 'required' && (
-                                    <p style={{ color: 'red', bottom: '-19px'}}>{errors.address.state.message}</p>
-                                )}
-                        </BoxForm>
-                        <BoxForm>
-                            <Label>Cidade*</Label>
-                            <ExclusiveRowBox>
-                                <Input
-                                    type='text'
-                                    id='city'
-                                    className='City'
-                                    placeholder='Caruaru'
-                                    {...register('address.city', {required: 'true'})}
-                                    style={{ borderColor: errors.address?.city ? 'red' : '' }}
-                                />
-                            </ExclusiveRowBox>
-                                {errors.address?.city?.type === 'required' && (
-                                    <p style={{ color: 'red', bottom: '-2px' }}>{errors.address.city.message}</p>
-                                )}
-                        </BoxForm>
+                                <ExclusiveRowBox>
+                                    <select
+                                        id='state'
+                                        className='UF'
+                                        {...register('address.state', {required:'true'})}
+                                        style={{ borderColor: errors.address?.state ? 'red': '' }}
+                                    >
+                                        <option selected disabled value="">Selecione</option>
+
+                                        <option value="AC">AC</option>
+                                        <option value="AL">AL</option>
+                                        <option value="AP">AP</option>
+                                        <option value="AM">AM</option>
+                                        <option value="BA">BA</option>
+                                        <option value="CE">CE</option>
+                                        <option value="DF">DF</option>
+                                        <option value="ES">ES</option>
+                                        <option value="GO">GO</option>
+                                        <option value="MA">MA</option>
+                                        <option value="MT">MT</option>
+                                        <option value="MS">MS</option>
+                                        <option value="MG">MG</option>
+                                        <option value="PA">PA</option>
+                                        <option value="PB">PB</option>
+                                        <option value="PR">PR</option>
+                                        <option value="PE">PE</option>
+                                        <option value="PI">PI</option>
+                                        <option value="RJ">RJ</option>
+                                        <option value="RN">RN</option>
+                                        <option value="RS">RS</option>
+                                        <option value="RO">RO</option>
+                                        <option value="RR">RR</option>
+                                        <option value="SC">SC</option>
+                                        <option value="SP">SP</option>
+                                        <option value="SE">SE</option>
+                                        <option value="TO">TO</option>
+                                    </select>
+                                </ExclusiveRowBox>
+                                    {errors.address?.state?.type === 'required' && (
+                                        <MessageError>{errors.address.state.message}</MessageError>
+                                    )}
+                            </BoxForm>
+                            <BoxForm>
+                                <Label>Cidade*</Label>
+                                <ExclusiveRowBox>
+                                    <Input
+                                        type='text'
+                                        id='city'
+                                        className='City'
+                                        placeholder='Caruaru'
+                                        {...register('address.city', {required: 'true'})}
+                                        style={{ borderColor: errors.address?.city ? 'red' : '' }}
+                                    />
+                                </ExclusiveRowBox>
+                                    {errors.address?.city?.type === 'required' && (
+                                        <MessageError>{errors.address.city.message}</MessageError>
+                                    )}
+                            </BoxForm>
+                        </ExclusiveRowBox>
                     </DivContainer>
 
                     <BoxButtons>
