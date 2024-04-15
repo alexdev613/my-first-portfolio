@@ -17,7 +17,7 @@ export const Content = styled.div`
     border-radius: 1.875rem;
 
     @media (max-width: 900px) {
-        width: 30rem;
+        width: 24rem;
     }
 `;
 
@@ -28,7 +28,7 @@ export const DivContainer = styled.div`
     flex-direction: row;
     gap: 1.875rem;
     @media (max-width: 900px) {
-        width: 26.125rem;
+        width: 20.125rem;
         flex-direction: column;
         gap: 0rem;
     }
@@ -78,7 +78,7 @@ export const ExclusiveRowBox = styled.div`
     .Phone {
         width: 17.275rem;
         @media (max-width: 900px) {
-            width: 20.275rem;
+            width: 14.275rem;
         }
     }
 
@@ -94,8 +94,9 @@ export const ExclusiveRowBox = styled.div`
 
     .City {
         width: 14.8rem;
+        
         @media (max-width: 900px){
-            width: 17.8rem ;
+            width: 11.8rem ;
         }
     }
 `;
@@ -188,7 +189,7 @@ export const BoxForm = styled.div`
         width: 15.825rem;
         margin-right: 1rem;
         @media (max-width: 900px) {
-            width: 18.775rem;
+            width: 12.775rem;
         }
     }
 
@@ -198,8 +199,9 @@ export const BoxForm = styled.div`
 
     .complement {
         width: 48.15rem;
+        
         @media (max-width: 900px) {
-        width: 26.125rem;
+        width: 20.125rem;
     }
     }
 `;
