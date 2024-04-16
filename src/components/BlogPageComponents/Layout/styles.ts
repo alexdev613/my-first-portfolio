@@ -226,6 +226,7 @@ export const ComponenteNovo = styled.section`
   width: 100%;
   height: auto;
   background-color: white;
+  padding: 30px 12px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

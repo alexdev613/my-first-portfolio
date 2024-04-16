@@ -181,7 +181,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </SidebarWrapper>
         <ComponenteNovo>
           <MicroCard imageUrl={universe} title={'Horóscopo'}  titleColor={'green'} text={'O que os astros dizem sobre o seu signo para esta semama? Um big bang de emoções pros signos de água!'} />
-          <MicroCard imageUrl={w} title={'Quadrinhos'} titleColor={'blue'} text={'Droga! Wolverine fatia mais um! Mas os X-MEN fingem que nada aconteceu! Mas será possível?'} />
+          <MicroCard imageUrl={w} title={'Quadrinhos'} titleColor={'blue'} text={'Droga! Wolverine fatia mais um rocambole! Mas os X-MEN fingem que nada aconteceu! Mas será possível?'} />
           <MicroCard imageUrl={chavinho} title={'Tech'} titleColor={'red'} text={'Tecnologia da Informação, é uma área promissora, que disponibiliza muitas vagas de trabalho no Brasil e no mundo!'} />
         </ComponenteNovo>
       </ContentWrapper>

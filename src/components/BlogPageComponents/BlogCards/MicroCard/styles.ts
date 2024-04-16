@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MicroCardContainer = styled.div`
   box-sizing: border-box;
-  width: 226px; /* Largura fixa do card */
+  width: 226px; /* Largura padrão do card */
   height: 250px;
   margin: 8px;
   padding: 2px;
@@ -27,9 +27,8 @@ export const MicroCardContainer = styled.div`
   @media (max-width: 490px) {
     display: flex;
     flex-direction: column;
-    width: 226px;
+    min-width: 226px;
     height: 250px;
-    background-color: initial; /* Pode remover o background-color aqui */
   }
 `;
 
