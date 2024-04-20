@@ -29,7 +29,7 @@ const Blog = () => {
     };
 
     return (
-        <BodyContainer>
+        <BodyContainer  id="top">
             <NavBar position={"static"} />
             <Header />
             <ProvisoryContainer>

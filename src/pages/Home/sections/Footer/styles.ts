@@ -124,6 +124,7 @@ export const Copyright = styled.div`
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    user-select: none; // não deixa copiar o texto escrito! Só por charme
 
     span {
         color: #fff;
@@ -137,4 +138,30 @@ export const Copyright = styled.div`
       color: #eee;
       font-size: 0.825rem;
     }
+`;
+
+export const GoToTop = styled.div`
+  position: absolute;
+  background-color:#465975;
+  width: 72px;
+  padding-top: 8px;
+  color: white;
+  height: "57px";
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+  left: 65px;
+  margin: 0px;
+  padding: 10px;
+  height: 57px;
+
+  a {
+    color: inherit; // vai herdar a cor do pai direto se não tiver cor definida no pai direto, herdará de outro pai
+    font-weight: 900;
+    text-decoration: none;
+  }
+
+  @media (max-width: 400px) {
+    left: 25px;
+  }
 `;

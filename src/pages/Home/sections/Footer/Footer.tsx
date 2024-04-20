@@ -12,6 +12,7 @@ import {
     SocialIcon,
     IconLink,
     Copyright,
+    GoToTop,
 } from "./styles.ts";
 import { Link } from "react-router-dom";
 
@@ -140,15 +141,11 @@ const Footer: React.FC = () => {
                     O uso deste site está sujeito aos termos de uso expressos. Ao usar este
                     site, você concorda em estar vinculado por estes
                 </p>
-                <CustomizedLink
-                    href="#"
-                    textDecoration="underline"
-                    color="#FFF"
-                    fontSize="0.825rem"
-                >
-                        <Link to="/serviceterms" style={{ color: "inherit" }}>Termos de Serviço Universal</Link>
-                </CustomizedLink>
+                    <Link to="/serviceterms" style={{ color: "white", fontSize: "0.825rem" }}>Termos de Serviço Universal</Link>
             </Copyright>
+            <GoToTop>
+                <a href="#top">TOPO</a>
+            </GoToTop>
         </FooterContainer>
     );
 };
