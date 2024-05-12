@@ -1,9 +1,14 @@
-import { Container } from "./styles";
+import { BoxInfo, ColumnistsName, Container, Content, ImageCharacter } from "./styles";
 
 const ColumnistCard = () => {
   return (
     <Container>
-      <h1>Card do Coluna</h1>
+      <Content>
+        <ImageCharacter />
+        <BoxInfo>
+          <ColumnistsName>Alex Nascimento</ColumnistsName>
+        </BoxInfo>
+      </Content>
     </Container>
   )
 }
