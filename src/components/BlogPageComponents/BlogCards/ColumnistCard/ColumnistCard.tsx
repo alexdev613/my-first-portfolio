@@ -1,8 +1,10 @@
+import { Container } from "./styles";
+
 const ColumnistCard = () => {
   return (
-    <div>
+    <Container>
       <h1>Card do Coluna</h1>
-    </div>
+    </Container>
   )
 }
 
