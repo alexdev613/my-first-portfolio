@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: auto;
   max-width: 500px;
 `;
 
@@ -15,10 +14,18 @@ export const ImageCharacter = styled.img`
   height: 96px;
 `;
 
-export const BoxInfo = styled.img`
-  width: auto;
+export const BoxInfo = styled.div`
+  min-width: 154px;
+  min-height: 96px;
+  margin-bottom: 20px;
+  background-color: antiquewhite;
 `;
 
-export const ColumnistsName = styled.h1`
+export const ColumnistsName = styled.h4`
   color: black;
+  line-height: 0;
+`;
+
+export const Subject = styled.p`
+  color: darkslategray;
 `;

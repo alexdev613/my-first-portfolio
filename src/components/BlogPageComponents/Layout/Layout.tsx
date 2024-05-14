@@ -35,6 +35,7 @@ import chavinho from '../../../assets/images/chavinho.jpg';
 import NavBar from '../../NavBar/NavBar';
 import { Link } from 'react-router-dom';
 import MicroCard from '../BlogCards/MicroCard/MicroCard';
+import ColumnistCard from '../BlogCards/ColumnistCard/ColumnistCard';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -47,6 +48,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Header />
       <ContentWrapper>
         <MainContent>{children}</MainContent>
+        
         <SidebarWrapper>
           <div className='conteudo-lateral'>
             <div className='post-destaque'>
@@ -149,45 +151,53 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </SocialsList>
 
           </div>
-              <CarouselContainer>
-                <Swiper
-                  modules={[ Pagination, Autoplay, EffectFade ]}
-                  effect='fade'
-                  slidesPerView={1}
-                  autoplay={{delay: 3000}}
-                  spaceBetween={50}
-                >
-                  <SwiperSlide>
-                    <p style={{ fontWeight: "900"}}>__ Quero ver, outra vez, seus olhinhos de noite Serena! Quero ouvir... <br /> __ Lave as Orelhas!</p>
-                    <img src={chavinho} alt="" style={{ objectFit: 'fill', width: '100%', height: '58.5%'}}/>
-                  </SwiperSlide>
-                  <SwiperSlide style={{ display: 'flex'}}>
-                    <img src={stars} style={{ objectFit: 'cover' }} alt="" />
-                  </SwiperSlide>
-                  <SwiperSlide style={{ display: 'flex'}}>
-                    <img src={w} alt="" style={{ objectFit: 'contain', width: '100%', height: '100%'}}/>
-                  </SwiperSlide>
-                  <SwiperSlide style={{ display: 'flex'}}>
-                    <img src={w} alt="" style={{ objectFit: 'fill', width: '100%', height: '100%'}}/>
-                  </SwiperSlide>
-                  <SwiperSlide style={{ display: 'flex'}}>
-                    <img src={w} alt="" style={{ objectFit: 'cover', width: '100%', height: '100%'}}/>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={advertise} alt="" style={{ objectFit: 'fill', width: '100%', height: '100%'}} />
-                  </SwiperSlide>
-                </Swiper>
-              </CarouselContainer>
+
+          <ColumnistCard imageUrl={w} author={'Alex Nascimento'} text={'Olá mundo ou hello world'} />
+
+          <CarouselContainer>
+            <Swiper
+              modules={[ Pagination, Autoplay, EffectFade ]}
+              effect='fade'
+              slidesPerView={1}
+              autoplay={{delay: 3000}}
+              spaceBetween={50}
+            >
+              <SwiperSlide>
+                <p style={{ fontWeight: "900"}}>__ Quero ver, outra vez, seus olhinhos de noite Serena! Quero ouvir... <br /> __ Lave as Orelhas!</p>
+                <img src={chavinho} alt="" style={{ objectFit: 'fill', width: '100%', height: '58.5%'}}/>
+              </SwiperSlide>
+              <SwiperSlide style={{ display: 'flex'}}>
+                <img src={stars} style={{ objectFit: 'cover' }} alt="" />
+              </SwiperSlide>
+              <SwiperSlide style={{ display: 'flex'}}>
+                <img src={w} alt="" style={{ objectFit: 'contain', width: '100%', height: '100%'}}/>
+              </SwiperSlide>
+              <SwiperSlide style={{ display: 'flex'}}>
+                <img src={w} alt="" style={{ objectFit: 'fill', width: '100%', height: '100%'}}/>
+              </SwiperSlide>
+              <SwiperSlide style={{ display: 'flex'}}>
+                <img src={w} alt="" style={{ objectFit: 'cover', width: '100%', height: '100%'}}/>
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={advertise} alt="" style={{ objectFit: 'fill', width: '100%', height: '100%'}} />
+              </SwiperSlide>
+            </Swiper>
+          </CarouselContainer>
         </SidebarWrapper>
+
         <ComponenteNovo>
           <MicroCard imageUrl={universe} title={'Horóscopo'}  titleColor={'green'} text={'O que os astros dizem sobre o seu signo para esta semama? Um big bang de emoções pros signos de água!'} />
           <MicroCard imageUrl={w} title={'Quadrinhos'} titleColor={'blue'} text={'Droga! Wolverine fatia mais um rocambole! Mas os X-MEN fingem que nada aconteceu! Mas será possível?'} />
           <MicroCard imageUrl={chavinho} title={'Tech'} titleColor={'red'} text={'Tecnologia da Informação, é uma área promissora, que disponibiliza muitas vagas de trabalho no Brasil e no mundo!'} />
+          <ColumnistCard imageUrl={w} author={'Alex'} text={'Olá mundo'} />
         </ComponenteNovo>
+
       </ContentWrapper>
+
       <FooterSpace>
         <Footer />
       </FooterSpace>
+
     </PageContainer>
   );
 };

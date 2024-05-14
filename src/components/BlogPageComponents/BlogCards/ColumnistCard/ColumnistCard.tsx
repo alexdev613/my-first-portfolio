@@ -1,16 +1,31 @@
-import { BoxInfo, ColumnistsName, Container, Content, ImageCharacter } from "./styles";
+import React from "react";
+import {
+  Container,
+  Content,
+  ImageCharacter,
+  BoxInfo,
+  ColumnistsName,
+  Subject
+} from "./styles";
 
-const ColumnistCard = () => {
+interface ColumnistCardProps {
+  imageUrl: string;
+  author: string;
+  text: string;
+}
+
+const ColumnistCard: React.FC<ColumnistCardProps> = ({ imageUrl, author, text }) => {
   return (
     <Container>
       <Content>
-        <ImageCharacter />
+        <ImageCharacter src={imageUrl} alt="imagem do coluna" />
         <BoxInfo>
-          <ColumnistsName>Alex Nascimento</ColumnistsName>
+          <ColumnistsName>{author}</ColumnistsName>
+          <Subject>{text}</Subject>
         </BoxInfo>
       </Content>
     </Container>
-  )
-}
+  );
+};
 
 export default ColumnistCard;
