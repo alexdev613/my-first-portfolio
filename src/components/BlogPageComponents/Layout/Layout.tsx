@@ -152,7 +152,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
           </div>
 
-          <ColumnistCard imageUrl={w} author={'Alex Nascimento'} text={'Olá mundo ou hello world'} />
+          <ColumnistCard imageUrl={w} author={'Alex Nascimento'} text={'DC lança quadrinho onde Flash derrota versão dos Vingadores e X-MEN'} />
 
           <CarouselContainer>
             <Swiper
@@ -189,7 +189,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <MicroCard imageUrl={universe} title={'Horóscopo'}  titleColor={'green'} text={'O que os astros dizem sobre o seu signo para esta semama? Um big bang de emoções pros signos de água!'} />
           <MicroCard imageUrl={w} title={'Quadrinhos'} titleColor={'blue'} text={'Droga! Wolverine fatia mais um rocambole! Mas os X-MEN fingem que nada aconteceu! Mas será possível?'} />
           <MicroCard imageUrl={chavinho} title={'Tech'} titleColor={'red'} text={'Tecnologia da Informação, é uma área promissora, que disponibiliza muitas vagas de trabalho no Brasil e no mundo!'} />
-          <ColumnistCard imageUrl={w} author={'Alex'} text={'Olá mundo'} />
+        </ComponenteNovo>
+        <ComponenteNovo>
+          <ColumnistCard imageUrl={w} author={'Alex'} text={'DC lança quadrinho onde Flash derrota versão dos Vingadores e X-MEN'} />
         </ComponenteNovo>
 
       </ContentWrapper>

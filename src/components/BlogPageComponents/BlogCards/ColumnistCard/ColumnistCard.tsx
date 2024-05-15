@@ -2,6 +2,7 @@ import React from "react";
 import {
   Container,
   Content,
+  BoxImage,
   ImageCharacter,
   BoxInfo,
   ColumnistsName,
@@ -18,8 +19,10 @@ const ColumnistCard: React.FC<ColumnistCardProps> = ({ imageUrl, author, text })
   return (
     <Container>
       <Content>
-        <ImageCharacter src={imageUrl} alt="imagem do coluna" />
         <BoxInfo>
+          <BoxImage>
+            <ImageCharacter src={imageUrl} alt="imagem do coluna" />
+          </BoxImage>
           <ColumnistsName>{author}</ColumnistsName>
           <Subject>{text}</Subject>
         </BoxInfo>
