@@ -244,6 +244,24 @@ export const ComponenteNovo = styled.section`
 
 /*--------------------------------------- Componente Novo ---------------------------------------*/
 
+export const Columns = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 16px 8px;
+  margin-bottom: 16px;
+
+  @media (min-width: 900px) {
+    display: none;
+  }
+
+  h2 {
+    line-height: 10px;
+  }
+`;
+
 /*------------------------------------------- Footer --------------------------------------------*/
 
 export const FooterSpace = styled.footer`

@@ -13,6 +13,7 @@ import {
   RowLink,
   CarouselContainer,
   ComponenteNovo,
+  Columns,
   FooterSpace
 } from './styles';
 
@@ -30,6 +31,8 @@ import { EffectFade, Pagination, Autoplay } from 'swiper/modules';
 import stars from "../../../assets/images/stars.gif";
 import universe from "../../../assets/images/universe.jpg";
 import w from "../../../assets/images/wolverine97.jpg";
+import alexHeisenberg from "../../../assets/images/alex.jpg";
+import alexNascimento from "../../../assets/images/alexDeveloper.jpg";
 import advertise from '../../../assets/images/advertise.png';
 import chavinho from '../../../assets/images/chavinho.jpg';
 import NavBar from '../../NavBar/NavBar';
@@ -152,7 +155,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
           </div>
 
-          <ColumnistCard imageUrl={w} author={'Alex Nascimento'} text={'DC lança quadrinho onde Flash derrota versão dos Vingadores e X-MEN'} />
+          <ColumnistCard imageUrl={alexNascimento} author={'Alex Nascimento'} text={'DC lança quadrinho onde Flash derrota versão dos Vingadores e X-MEN'} />
 
           <CarouselContainer>
             <Swiper
@@ -190,9 +193,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <MicroCard imageUrl={w} title={'Quadrinhos'} titleColor={'blue'} text={'Droga! Wolverine fatia mais um rocambole! Mas os X-MEN fingem que nada aconteceu! Mas será possível?'} />
           <MicroCard imageUrl={chavinho} title={'Tech'} titleColor={'red'} text={'Tecnologia da Informação, é uma área promissora, que disponibiliza muitas vagas de trabalho no Brasil e no mundo!'} />
         </ComponenteNovo>
-        <ComponenteNovo>
-          <ColumnistCard imageUrl={w} author={'Alex'} text={'DC lança quadrinho onde Flash derrota versão dos Vingadores e X-MEN'} />
-        </ComponenteNovo>
+
+        <Columns>
+          <h2>Colunas</h2>
+          <ColumnistCard imageUrl={alexHeisenberg} author={'Alex Heisenberg'} text={'DC lança quadrinho onde Flash derrota versão dos Vingadores e X-MEN'} />
+          <ColumnistCard imageUrl={alexNascimento} author={'Alex Nascimento'} text={'DC lança quadrinho onde Flash'} />
+        </Columns>
 
       </ContentWrapper>
 

@@ -3,12 +3,18 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: block;
   box-sizing: border-box;
-  unicode-bidi: isolate;
-  margin: 0;
-  padding: 0;
+  width: 100%;
   max-width: 500px;
   min-height: 96px;
+  min-width: 240px;
   margin-bottom: 22px;
+  line-height: 0;
+  background-color: whitesmoke;
+  border: 1px solid lightgrey;
+
+  :hover {
+    background-color: #eee;
+  }
 `;
 
 export const Content = styled.div`
@@ -20,8 +26,8 @@ export const BoxImage = styled.div`
   box-sizing: border-box;
   float: left;
   margin-right: 8px;
-  display: block;
-  unicode-bidi: isolate;
+  border: 1px solid lightgrey;
+  box-sizing: border-box;
 `;
 
 export const ImageCharacter = styled.img`
@@ -30,12 +36,11 @@ export const ImageCharacter = styled.img`
 `;
 
 export const BoxInfo = styled.div`
-  box-sizing: border-box;
   display: block;
-  unicode-bidi: isolate;
-  min-width: 250px;
-  min-height: 96px;
-  border: 1px solid orange;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 240px;
+  padding-right: 8px;
 `;
 
 export const ColumnistsName = styled.h4`
@@ -44,9 +49,22 @@ export const ColumnistsName = styled.h4`
   margin-block-end: 0.8em;
   color: black;
   line-height: 0;
+
+  @media (max-width: 300px) {
+    font-size: 14px;
+  }
 `;
 
 export const Subject = styled.p`
   color: darkslategray;
-  font-family: sans-serif
+  font-family: sans-serif;
+  font-size: 16px;
+  text-align: justify;
+  line-height: 22px;
+
+  @media (max-width: 300px) {
+    font-size: 14px;
+    text-align: inherit;
+    
+  }
 `;
