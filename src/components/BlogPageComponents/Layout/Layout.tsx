@@ -155,7 +155,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
           </div>
 
-          <ColumnistCard imageUrl={alexNascimento} author={'Alex Nascimento'} text={'DC lança quadrinho onde Flash derrota versão dos Vingadores e X-MEN'} />
+          <div style={{backgroundColor: "white", fontFamily: "Roboto"}}>
+            <h4 style={{marginLeft: "10px", marginBottom: "8px"}}>Colunas</h4>
+            <ColumnistCard imageUrl={alexHeisenberg} author={'Alex Heisenberg'} text={'Em 13 de maio OpenAI disponibiliza para público em geral o Chat GPT-4, com pesquisa a internet em tempo real!'} />
+            <ColumnistCard imageUrl={alexNascimento} author={'Alex Nascimento'} text={'19 de maio Caruaru recebe o ABNOGG 2024.1 evento nerd de Pernambuco!'} />
+            <ColumnistCard imageUrl={alexHeisenberg} author={'Alex Heisenberg'} text={'X-MEN 97: Magneto retira o adamantium do corpo de Logan.'} />
+            <ColumnistCard imageUrl={alexNascimento} author={'Alex Nascimento'} text={'Chaves e Chapolin, porque damos risada ainda hoje?'} />
+          </div>
 
           <CarouselContainer>
             <Swiper
