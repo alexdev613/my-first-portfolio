@@ -7,7 +7,7 @@ export const Container = styled.div`
   max-width: 500px;
   min-height: 96px;
   min-width: 240px;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
   line-height: 0;
   background-color: whitesmoke;
   border: 1px solid lightgrey;

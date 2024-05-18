@@ -35,6 +35,11 @@ import alexHeisenberg from "../../../assets/images/alex.jpg";
 import alexNascimento from "../../../assets/images/alexDeveloper.jpg";
 import advertise from '../../../assets/images/advertise.png';
 import chavinho from '../../../assets/images/chavinho.jpg';
+import vanessaGepeto from '../../../assets/images/vanessaGepeto.jpg';
+import patoIrritado from '../../../assets/images/patoIrritado.jpeg';
+import amadaFoca from '../../../assets/images/amadaFoca.jpg';
+import alanaBotzeye from '../../../assets/images/alanaBotzeye.webp';
+import jacobCohen from '../../../assets/images/jacobCohen.jpg';
 import NavBar from '../../NavBar/NavBar';
 import { Link } from 'react-router-dom';
 import MicroCard from '../BlogCards/MicroCard/MicroCard';
@@ -158,9 +163,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div style={{backgroundColor: "white", fontFamily: "Roboto"}}>
             <h4 style={{marginLeft: "10px", marginBottom: "8px"}}>Colunas</h4>
             <ColumnistCard imageUrl={alexHeisenberg} author={'Alex Heisenberg'} text={'Em 13 de maio OpenAI disponibiliza para público em geral o Chat GPT-4, com pesquisa a internet em tempo real!'} />
+            <ColumnistCard imageUrl={vanessaGepeto} author={'Vanessa Gepeto'} text={'X-MEN 97: Magneto retira o adamantium do corpo de Logan.'} />
+            <ColumnistCard imageUrl={jacobCohen} author={'Jacob Cohen'} text={'7 games proibidos no Brasil pelos mais diversos motivos!'} />
             <ColumnistCard imageUrl={alexNascimento} author={'Alex Nascimento'} text={'19 de maio Caruaru recebe o ABNOGG 2024.1 evento nerd de Pernambuco!'} />
-            <ColumnistCard imageUrl={alexHeisenberg} author={'Alex Heisenberg'} text={'X-MEN 97: Magneto retira o adamantium do corpo de Logan.'} />
-            <ColumnistCard imageUrl={alexNascimento} author={'Alex Nascimento'} text={'Chaves e Chapolin, porque damos risada ainda hoje?'} />
+            <ColumnistCard imageUrl={alanaBotzeye} author={'Alana Botzeye'} text={'Engenharia genética descobre como previnir o encurtamento dos telômeros, chave para retardar o envelhecimento e diversas doenças!'} />
+            <ColumnistCard imageUrl={amadaFoca} author={'Amada Foca'} text={'Chaves e Chapolin, porque damos risada ainda hoje?'} />
+            <ColumnistCard imageUrl={patoIrritado} author={'Pato Irritado'} text={'Tio Patinhas e seus sobrinhos ganharão animação 3D!'} />
           </div>
 
           <CarouselContainer>
@@ -202,8 +210,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
         <Columns>
           <h2>Colunas</h2>
+          <ColumnistCard imageUrl={alexHeisenberg} author={'Alex Heisenberg'} text={'Em 13 de maio OpenAI disponibiliza para público em geral o Chat GPT-4, com pesquisa a internet em tempo real!'} />
+          <ColumnistCard imageUrl={vanessaGepeto} author={'Vanessa Gepeto'} text={'X-MEN 97: Magneto retira o adamantium do corpo de Logan.'} />
+          <ColumnistCard imageUrl={jacobCohen} author={'Jacob Cohen'} text={'7 games proibidos no Brasil pelos mais diversos motivos!'} />
+          <ColumnistCard imageUrl={alexNascimento} author={'Alex Nascimento'} text={'19 de maio Caruaru recebe o ABNOGG 2024.1 evento nerd de Pernambuco!'} />
+          <ColumnistCard imageUrl={alanaBotzeye} author={'Alana Botzeye'} text={'Engenharia genética descobre como previnir o encurtamento dos telômeros, chave para retardar o envelhecimento e diversas doenças!'} />
+          <ColumnistCard imageUrl={amadaFoca} author={'Amada Foca'} text={'Chaves e Chapolin, porque damos risada ainda hoje?'} />
+          <ColumnistCard imageUrl={patoIrritado} author={'Pato Irritado'} text={'Tio Patinhas e seus sobrinhos ganharão animação 3D!'} />
           <ColumnistCard imageUrl={alexHeisenberg} author={'Alex Heisenberg'} text={'DC lança quadrinho onde Flash derrota versão dos Vingadores e X-MEN'} />
-          <ColumnistCard imageUrl={alexNascimento} author={'Alex Nascimento'} text={'DC lança quadrinho onde Flash'} />
         </Columns>
 
       </ContentWrapper>
