@@ -8,23 +8,45 @@ import {
   ColumnistsName,
   Subject
 } from "./styles";
+import { Link } from "react-router-dom";
 
 interface ColumnistCardProps {
   imageUrl: string;
   author: string;
   text: string;
+  hrefAuthor: string;
+  hrefSubject: string;
 }
 
-const ColumnistCard: React.FC<ColumnistCardProps> = ({ imageUrl, author, text }) => {
+const ColumnistCard: React.FC<ColumnistCardProps> = (
+  {
+    imageUrl,
+    author,
+    text,
+    hrefAuthor,
+    hrefSubject
+  }
+) => {
+
   return (
     <Container>
       <Content>
         <BoxInfo>
           <BoxImage>
-            <ImageCharacter src={imageUrl} alt="imagem do coluna" />
+            <Link to={hrefAuthor}>
+              <ImageCharacter src={imageUrl} alt="imagem do coluna" />
+            </Link>
           </BoxImage>
-          <ColumnistsName>{author}</ColumnistsName>
-          <Subject>{text}</Subject>
+          <ColumnistsName>
+            <Link to={hrefAuthor}>
+              {author}
+            </Link>
+          </ColumnistsName>
+          <Subject>
+            <Link to={hrefSubject}>
+              {text}
+            </Link>
+          </Subject>
         </BoxInfo>
       </Content>
     </Container>

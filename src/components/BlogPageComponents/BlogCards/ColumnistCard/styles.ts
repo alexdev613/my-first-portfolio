@@ -49,22 +49,39 @@ export const ColumnistsName = styled.h4`
   margin-block-end: 0.8em;
   color: black;
   line-height: 0;
+  transition: transform 0.25s ease-in-out;
 
   @media (max-width: 300px) {
     font-size: 14px;
   }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &:hover {
+    transform: scale(1.07);
+  }
+
+
 `;
 
-export const Subject = styled.p`
+export const Subject = styled.span`
   color: darkslategray;
-  font-family: sans-serif;
-  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
   text-align: justify;
   line-height: 22px;
 
   @media (max-width: 300px) {
-    font-size: 14px;
+    font-size: 13px;
     text-align: inherit;
     
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 `;

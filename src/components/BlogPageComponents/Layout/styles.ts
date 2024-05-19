@@ -86,18 +86,18 @@ export const SidebarWrapper = styled.aside`
     text-align: justify;
   }
 
-  a {
-    font-size: 14px;
-    font-weight: 900;
-    margin-left: 8px;
-    color: #004AAD;
-    text-decoration: none;
-  }
-
   .post-destaque {
     background-color: whitesmoke;
     border-bottom: 2px solid lightgrey;
     padding: 5px;
+
+    a {
+      font-size: 14px;
+      font-weight: 900;
+      margin-left: 8px;
+      color: #004AAD;
+      text-decoration: none;
+    }
   }
 
   .post-destaque:last-child {
@@ -111,12 +111,25 @@ export const SidebarWrapper = styled.aside`
 
   .categories a {
     display: block;
+    font-size: 14px;
+    font-weight: 900;
+    margin-left: 8px;
     padding-bottom: 8px;
+    color: #004AAD;
+    text-decoration: none;
   }
   
   .socials-media {
     background-color: white;
     padding: 5px;
+    
+    a {
+      font-size: 14px;
+      font-weight: 900;
+      margin-left: 8px;
+      color: #004AAD;
+      text-decoration: none;
+    }
   }
 `;
 
