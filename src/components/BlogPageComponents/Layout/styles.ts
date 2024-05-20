@@ -131,9 +131,20 @@ export const SidebarWrapper = styled.aside`
       text-decoration: none;
     }
   }
+
+  .columnists {
+    background-color: #FFF;
+    font-family: 'Roboto';
+
+    h3 {
+      padding-top: 26px;
+      padding-left: 10px;
+      line-height: 0px;
+    }
+  }
 `;
 
-/*------------------------------------- Bololô do Sidebar ---------------------------------------*/
+/*------------------------------------- Parada do Sidebar ---------------------------------------*/
 
 /*-------------------------------------- Div do Carousel ----------------------------------------*/
 

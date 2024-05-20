@@ -160,8 +160,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
           </div>
 
-          <div style={{backgroundColor: "white", fontFamily: "Roboto"}}>
-            <h4 style={{marginLeft: "10px", marginBottom: "8px"}}>Colunas</h4>
+          <div className='columnists'>
+            <h3>COLUNAS</h3>
             <ColumnistCard imageUrl={alexHeisenberg} author={'Alex Heisenberg'} text={'Em 13 de maio OpenAI disponibiliza para público em geral o Chat GPT-4, com pesquisa a internet em tempo real!'} hrefAuthor={'https://youtube.com'} hrefSubject={'#'} />
             <ColumnistCard imageUrl={vanessaGepeto} author={'Vanessa Gepeto'} text={'X-MEN 97: Magneto retira o adamantium do corpo de Logan.'} hrefAuthor={'#'} hrefSubject={'#'} />
             <ColumnistCard imageUrl={jacobCohen} author={'Jacob Cohen'} text={'7 games proibidos no Brasil pelos mais diversos motivos!'} hrefAuthor={'#'} hrefSubject={'#'} />
@@ -209,7 +209,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </ComponenteNovo>
 
         <Columns>
-          <h2>Colunas</h2>
+          <h2>COLUNAS</h2>
           <ColumnistCard imageUrl={alexHeisenberg} author={'Alex Heisenberg'} text={'Em 13 de maio OpenAI disponibiliza para público em geral o Chat GPT-4, com pesquisa a internet em tempo real!'} hrefAuthor={'#'} hrefSubject={'#'} />
           <ColumnistCard imageUrl={vanessaGepeto} author={'Vanessa Gepeto'} text={'X-MEN 97: Magneto retira o adamantium do corpo de Logan.'} hrefAuthor={'#'} hrefSubject={'#'} />
           <ColumnistCard imageUrl={jacobCohen} author={'Jacob Cohen'} text={'7 games proibidos no Brasil pelos mais diversos motivos!'} hrefAuthor={'#'} hrefSubject={'#'} />
