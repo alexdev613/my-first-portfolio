@@ -17,7 +17,8 @@ import {
     SaveButton,
     CancelButton,
 } from './styles';
-// import { useState } from 'react';
+
+import { toast } from 'react-toastify';
 
 export interface CompanyData {
     cnpj: string,
@@ -79,7 +80,7 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
         clearErrors,
         getValues,
         reset,
-    } = useForm<CompanyData>({
+    } = useForm<CompanyData, Address>({
         resolver: yupResolver(schema),
         defaultValues: {
             cnpj: '',
@@ -161,9 +162,19 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
         setValue('address.city', '');
 
         if (!hasCepError) {
-          setValue('address.cep', '');
           setHasCepError(true);
-
+          toast.error('CEP inválido', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+          setValue('address.cep', '');
+          setHasCepError(false);
         }
       }
     }
@@ -179,7 +190,17 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
           type: 'cep-incomplete',
           message: 'O CEP está incompleto***',
         });
-        alert('CEP Incompleto');
+        toast.error('CEP incompleto', {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'light',
+        });
+        // alert('CEP Incompleto');
         return;
       }
       clearErrors('address.cep');
@@ -191,7 +212,6 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
           [field]: value,
         });
       };
-
 
 
     return (
