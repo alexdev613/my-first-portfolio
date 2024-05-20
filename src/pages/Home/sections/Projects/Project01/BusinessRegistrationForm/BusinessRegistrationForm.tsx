@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { formatCep, handleKeyCepPress, isCompleteCEP } from '../../../../../../utils/cepUtils';
 
 import {
     Container,
@@ -25,7 +26,7 @@ export interface CompanyData {
     ddiNumber: string,
     phone: string,
     address: Address,
-};
+}
 
 export interface Address {
     cep: string;
@@ -48,7 +49,13 @@ const schema = yup.object().shape({
     ddiNumber: yup.string().required('DDI é obrigatório'),
     phone: yup.string().required('Telefone obrigatório'),
     address: yup.object().shape({
-        cep: yup.string().required('CEP obrigatório'),
+        cep: yup.
+          string()
+          .required('CEP obrigatório')
+          .test('cep-validation', 'CEP inválido', (value) => {
+            const formattedValue = formatCep(value ?? '');
+            return formattedValue.length === 9;
+          }),
         street: yup.string().required('Endereço é obrigatório'),
         number: yup.string().required('Número é obrigatório'),
         complement: yup.string().required('Complemento é obrigatório'),
@@ -66,6 +73,11 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
         register,
         handleSubmit,
         formState: { errors },
+        setValue,
+        setFocus,
+        setError,
+        clearErrors,
+        getValues,
         reset,
     } = useForm<CompanyData>({
         resolver: yupResolver(schema),
@@ -112,6 +124,75 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
     const handelCancel = () => {
         reset();
     }
+
+    const [hasCepError, setHasCepError] = useState(false);
+
+    const checkCEP = async (event: React.ChangeEvent<HTMLInputElement>) => {
+      const cep = event.target.value.replace(/\D/g, '');
+      if (cep.length !== 8) {
+        return;
+      }
+
+      try {
+        const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+        const data = await response.json();
+        if (data.erro) {
+          throw new Error('CEP inexistente ou inválido');
+        }
+
+        setValue('address.street', data.logradouro);
+        setValue('address.neighborhood', data.bairro);
+        setValue('address.city', data.localidade);
+        setValue('address.state', data.uf);
+        setFocus('address.number');
+
+        if (hasCepError) {
+          clearErrors('address.cep');
+          setHasCepError(false);
+        }
+      } catch (err) {
+        console.log(`CEP inexistente\n${cep} \n${err}`);
+        setError('address.cep', { type: 'invalid', message: 'CEP inválido' });
+        setValue('address.street', '');
+        setValue('address.number', '');
+        setValue('address.complement', '');
+        setValue('address.neighborhood', '');
+        setValue('address.state', '');
+        setValue('address.city', '');
+
+        if (!hasCepError) {
+          setValue('address.cep', '');
+          setHasCepError(true);
+
+        }
+      }
+    }
+
+    function handleBlurpCep(event: React.ChangeEvent<HTMLInputElement>) {
+      const cep = event.target.value;
+      if (!cep) {
+        return;
+      }
+
+      if (!isCompleteCEP(cep)) {
+        setError('address.cep', {
+          type: 'cep-incomplete',
+          message: 'O CEP está incompleto***',
+        });
+        alert('CEP Incompleto');
+        return;
+      }
+      clearErrors('address.cep');
+    }
+
+    const handleAddressChange = (field: string, value: string) => {
+        setValue('address', {
+          ...getValues('address'),
+          [field]: value,
+        });
+      };
+
+
 
     return (
         <Container>
@@ -218,6 +299,17 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
                                 maxLength={9}
                                 placeholder='00000-000'
                                 {...register('address.cep', {required: 'true'})}
+                                onChange={(event) => {
+                                  const formattedValue = formatCep(event.target.value)
+                                  setValue('address.cep', formattedValue, { shouldValidate: true });
+                                  handleAddressChange('cep', formattedValue);
+                                  checkCEP(event);
+                                }}
+                                onBlur={(event) => {
+                                  handleBlurpCep(event);
+                                  checkCEP(event);
+                                }}
+                                onKeyPress={handleKeyCepPress}
                                 style={{ borderColor: errors.address?.cep ? 'red' : '' }}
                             />
                             <span className='linkCep'>
