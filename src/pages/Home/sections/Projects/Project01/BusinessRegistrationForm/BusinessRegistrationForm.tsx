@@ -3,6 +3,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { formatCep, handleKeyCepPress, isCompleteCEP } from '../../../../../../utils/cepUtils';
+import { isValidEmail } from '../../../../../../utils/emailUtils';
 
 import {
     Container,
@@ -46,7 +47,10 @@ interface BusinessRegistrationFormProps {
 const schema = yup.object().shape({
     cnpj: yup.string().required('CNPJ obrigatório!'),
     company: yup.string().required('Nome da empresa é obrigatório!'),
-    email: yup.string().required('Email obritagório'),
+    email: yup
+        .string()
+        .required('Email obritagório')
+        .test('email-validation', 'Email inválido', (value) => isValidEmail(value ?? '')),
     ddiNumber: yup.string().required('DDI é obrigatório'),
     phone: yup.string().required('Telefone obrigatório'),
     address: yup.object().shape({
@@ -67,9 +71,7 @@ const schema = yup.object().shape({
 });
 
 const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onAddCompany }) => {
-    // Estado para armazenar os dados da empresa
-    // const [companyData, setCompanyData] = useState<CompanyData[]>([]);
-
+    
     const {
         register,
         handleSubmit,
@@ -111,9 +113,6 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
             // Se a validação for bem sucedida, exibir os dados no console
             console.log('Dados do formulário:', data);
             
-            // Adicionar os novos dados ao estado de companyData
-            // setCompanyData([...companyData, data]);
-            
             // Limpar o formulário após o envio bem-sucedido
             reset(); // Limpa o formulário
         } catch (validationErrors) {
@@ -125,6 +124,8 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
     const handelCancel = () => {
         reset();
     }
+
+    // Trabalhando com a API ViaCEP e colocando uma lógica para o campo cep e preenchimento de endereço:
 
     const [hasCepError, setHasCepError] = useState(false);
 
@@ -225,7 +226,6 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
                             <Input
                                 type='text'
                                 id='company'
-                                // name='company'
                                 placeholder='Alex Heisenberg Corp.'
                                 {...register('company', {required: true})}
                                 style={{ borderColor: errors.company ? 'red': '' }}
@@ -239,7 +239,6 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
                             <Input
                                 type='text'
                                 id='cnpj'
-                                // name='cnpj'
                                 maxLength={18}
                                 placeholder='99.999.999/0001-99'
                                 {...register('cnpj', { required: true})}
@@ -257,7 +256,6 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
                             <Input
                                 type='email'
                                 id='email'
-                                // name='email'
                                 placeholder='alex.heisenberg@geekblog.com'
                                 {...register('email', {required: true})}
                                 style={{ borderColor: errors.email ? 'red' : '' }}
@@ -275,7 +273,6 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
                                 <BoxForm>
                                     <select
                                         id='ddiNumber'
-                                        // name='ddiNumber'
                                         className='DDI'
                                         {...register('ddiNumber', {required:'true'})}
                                         style={{ borderColor: errors.ddiNumber ? 'red': '' }}
@@ -295,7 +292,6 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
                                     <Input
                                         type='text'
                                         id='phone'
-                                        // name='phone'
                                         className='Phone'
                                         maxLength={15}
                                         placeholder='(81) 9 9999-9999'
