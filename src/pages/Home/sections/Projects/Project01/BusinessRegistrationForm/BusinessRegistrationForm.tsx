@@ -4,6 +4,7 @@ import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { formatCep, handleKeyCepPress, isCompleteCEP } from '../../../../../../utils/cepUtils';
 import { isValidEmail } from '../../../../../../utils/emailUtils';
+import { formatCNPJ } from '../../../../../../utils/cnpjUtils';
 
 import {
     Container,
@@ -242,6 +243,10 @@ const BusinessRegistrationForm: React.FC<BusinessRegistrationFormProps> = ({ onA
                                 maxLength={18}
                                 placeholder='99.999.999/0001-99'
                                 {...register('cnpj', { required: true})}
+                                onChange={event => {
+                                  const formattedValue = formatCNPJ(event.target.value);
+                                  event.target.value = formattedValue;
+                                }}
                                 style={{ borderColor: errors.cnpj ? 'red': '' }}
                             />
                             {errors.cnpj?.type === 'required' && (
