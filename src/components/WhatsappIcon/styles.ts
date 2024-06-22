@@ -1,3 +1,4 @@
+import { Visibility } from "@mui/icons-material";
 import styled from "styled-components";
 
 export const Icon = styled.a`
@@ -22,5 +23,28 @@ export const Icon = styled.a`
         color: #029e3b;
         font-weight: 900;
         box-shadow: 2px 2px 20px #5fe690;
+
+        span {
+          visibility: visible;
+          opacity: 1;
+        }
     }
+    
+    // esse span é nossa tooltip
+    span {
+      visibility: hidden;
+      position: absolute;
+      color: white;
+      top: 8px;
+      left: -175px;
+      font-size: 15px;
+      font-weight: 500;
+      background-color: #232323;
+      padding: 2px 8px;
+      border-radius: 10px;
+      z-index: 100;
+      opacity: 0;
+      transition: opacity 0.8s;
+    }
+
 `;
