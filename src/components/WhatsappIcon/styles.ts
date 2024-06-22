@@ -1,4 +1,3 @@
-import { Visibility } from "@mui/icons-material";
 import styled from "styled-components";
 
 export const Icon = styled.a`
