@@ -5,10 +5,10 @@ import { BiographyButton } from "./styles";
 
 const About = () => {
     const StyledAbout = styled("div")(({ }) => ({
-        backgroundColor: "beige",
-        // backgroundImage: 'linear-gradient(to top right, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2)), url(src/assets/images/programmer.png)',
-        // backgroundSize: 'cover',
-        // backgroundPosition: 'center',
+        // backgroundColor: "beige",
+        backgroundImage: 'linear-gradient(to top right, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2)), url(src/assets/images/programmer.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         minHeight: "80vh",
         display: "flex",
         alignItems: "center",
@@ -52,8 +52,8 @@ const About = () => {
                             border="2px solid silver"
                             borderRadius="1.875rem"
                             padding="1.5rem 2.5rem"
-                            // color="#eee"
-                            color="#000"
+                            color="#eee"
+                            //color="#000"
                             boxShadow="25px 25px 22px rgba(63, 239, 239, 0.05)"
                         >
                             <Typography variant="h4" fontWeight="bold">Apresentação:</Typography>
