@@ -6,7 +6,7 @@ import { BiographyButton } from "./styles";
 const About = () => {
     const StyledAbout = styled("div")(({ }) => ({
         // backgroundColor: "beige",
-        backgroundImage: 'linear-gradient(to top right, rgba(255, 6, 6, 0.2), rgba(0, 0, 0, 0.2)), url(https://img.freepik.com/fotos-gratis/plano-de-fundo-de-programacao-com-pessoa-trabalhando-com-codigos-no-computador_23-2150010125.jpg?w=826&t=st=1719543461~exp=1719544061~hmac=e0c05b52fb534c1e391e03fae368766a8be49a902cac6c54f0e42ea4944ba569)',
+        backgroundImage: 'linear-gradient(to right bottom, rgba(11, 15, 5, 0.884), rgba(0, 5, 3, 0.49)), url(https://i.pinimg.com/originals/51/23/a2/5123a2db9db67f636aa055924df85ec5.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         minHeight: "80vh",
